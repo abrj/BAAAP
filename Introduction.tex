@@ -1,0 +1,40 @@
+\part{Introduction}
+\section{Foreword}
+There has been a great deal of development within the world of tutorials ever since the original idea of a tutor was first established at Oxford University in the 15th century. Back then, the scholars became responsible for the proper education of their fellow colleagues. Today, the expansive growth within the technological area, with the Internet as one of its central parts, has ensured a rapid development of online tutorials, making it possible for the average person to attain knowledge and knowhow of virtually every imaginable subject, ranging from gardening to the creation of your own rocket.
+All that is needed is an internet connection along with a sense of curiosity and a willingness to learn.\\
+
+%Skal vi ikke udlade det her?
+%Our site offers tutorials which is specifically centered around the area of technology and our longterm goal is to make it as close to self-sustainable as possible, by focusing on user generated content. One incentive for this is that uploaders will get paid for other users watching their videos, thus making sure that the tutorials are of as high quality as possible in order to get higher ratings and more users.%
+
+\section{Project Description}
+For this project we have been giving a project description containing both a formal written description of the project and a list of goals and requirements. From this we know that we have to produce a system with a server which can store and make different types of media files accessible for users, publishing the operations using a WCF interface.\\
+The description also states that its necessary to develop a client application, which can access the media files on the server, administrate these files and view and/or download the files. The technology used for this application is optional.\\
+
+\subsection{Requirements}
+The requirements from the project description can be outlined as list of requirements:
+\subsubsection{Server}
+\begin{itemize}
+\item Must support one or more WCF services, written in c-sharp
+\item Must be deployed on an IIS 7 Server
+\item Must use a Microsoft SQL database
+\item Must support multiple users using the same video file concurrently
+\item Must support both admin and normal user login (either by Facebook or Google), which gives different privileges
+\item Must support handling of both upload, rent, and download of files
+\item Must support search for media files in the database, based on arguments from the client
+\item Must be able to process and distribute payments between users and authors
+\item Must hold meta information about each video file which is displayed at the client application (more analytical information)
+\item Based on a users previous rented or bought video files the server must be able to show recommendations
+\item Must give users the option to rate a tutorial
+\end{itemize}
+
+\subsubsection{Client}
+Some client requirements should be listed here
+
+\section{Vision}
+In the following a system will be proposed, where it is possible for a user to rent, purchase and upload different kind of media files. These media files will be in the form of tutorials and the author of the file(s), will be paid through the system when the users purchases or rents the media file. The program will include a registry of available media files for the user, which have been tagged by the author. This gives the users the option to search for different files in categories and also rate the media files.\\
+
+A user can either rent or purchase a tutorial. If the user rents a tutorial it will only be available for a given time period and include some form of advertisement. If the user chooses to purchase a tutorial it will be available to the user for good. \\ 
+In other words our vision is to make a service which will include some educational technology related tutorials and  where the author of a good and thorough tutorial will be awarded financial for the work.
+
+\section{SMU Collaboration}
+
