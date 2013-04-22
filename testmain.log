@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  22 APR 2013 11:54
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  22 APR 2013 12:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -250,7 +250,7 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(./testmain.aux (./Vision.aux) (./analysis.aux))
+(./testmain.aux (./Foreword.aux) (./Vision.aux) (./analysis.aux))
 \openout1 = `testmain.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -265,22 +265,33 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
- (./testmain.toc
+
+(./testmain.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 5.
+(Font)              <7> on input line 6.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 5.
+(Font)              <5> on input line 6.
 )
 \tf@toc=\write3
 \openout3 = `testmain.toc'.
 
  [1
 
-{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+\openout2 = `Foreword.aux'.
+
+ (./Foreword.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--4
+
+ []
+
+) [3
+
+]
 \openout2 = `Vision.aux'.
 
- (./Vision.tex)
-[2
+ (./Vision.tex) [4
+
 
 ]
 \openout2 = `analysis.aux'.
@@ -299,28 +310,29 @@ Overfull \hbox (45.83395pt too wide) in paragraph at lines 23--24
 n sites like www.youtube.com
  []
 
-[3
+[5
 
 
-] [4] [5]) [6] (./testmain.aux (./Vision.aux) (./analysis.aux)) ) 
+] [6] [7]) [8] (./testmain.aux (./Foreword.aux) (./Vision.aux)
+(./analysis.aux)) ) 
 Here is how much of TeX's memory you used:
- 458 strings out of 493633
- 4769 string characters out of 3143378
+ 466 strings out of 493633
+ 4866 string characters out of 3143378
  54358 words of memory out of 3000000
- 3804 multiletter control sequences out of 15000+200000
+ 3805 multiletter control sequences out of 15000+200000
  5811 words of font info for 21 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 25i,5n,21p,920b,145s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/te
-xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/tex
-live/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texl
-ive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
-e/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
-/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on testmain.pdf (6 pages, 82820 bytes).
+ 25i,5n,21p,920b,146s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbx10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmti10.pfb>
+Output written on testmain.pdf (8 pages, 85589 bytes).
 PDF statistics:
- 43 PDF objects out of 1000 (max. 8388607)
- 29 compressed objects within 1 object stream
+ 51 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
