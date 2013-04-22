@@ -5,7 +5,7 @@
 \source{Aristotle}
 \end{center}
 \vspace{30pt}
-In this section, we will attempt to give the reader insight into the rationale behind the decisions made in the course of the project, by reflecting on challenges and surprises uncovered by analysing the problem area. In other words, the section will try to explain \textit{why} the system has been designed as it has, why the process has been managed the way it has, and so on.
+In this section, we will attempt to give the reader insight into the rationale behind the decisions made in the course of the project, by reflecting on challenges and surprises uncovered by analysing the problem area. In other words, the section will try to explain \textit{why} the system has been designed as it has and why the process has been managed the way it has.
 
 The section is structured by the various techniques and artefacts used in conducting the analysis. The primary topics covered in this section are:
 \begin{itemize}
@@ -14,7 +14,7 @@ The section is structured by the various techniques and artefacts used in conduc
 \item Data modelling
 \item Architectural analysis
 \end{itemize}
-We begin the section by investigating and discussing the activities aimed at uncovering requirements for the system.
+We begin the section by investigating and discussing the conceptual business model of the system.
 
 \section{Business modelling}
 The following will present a business model, which will demonstrate the main ideas behind the our conceptualized system, the advantages and the possible threats.
@@ -54,10 +54,6 @@ Use cases concerning downloading, viewing and rating videos
 Use cases concerning transactions between account balances and buying more RentIt credits.
 \end{itemize}
 In other words, the use cases reveal at least three major areas of responsibility within the required functionality of the system. These responsibilities imply a large scale organization of namespaces, by way of the GRASP principles.
-
-In addition, the use cases provided some intuition about the control flow of some of the major operations of the system. Take for example user case no. 4, which describes downloading a video. 
-
-Furthermore, the use cases proved an effective way of communicating ideas with the SMU group. By comparing our use cases with their use case model, it was possible to reconcile the two groups expectations to the semantic meaning of the different operations of the system. 
 \subsection{Factor Table}
 As opposed to the functional requirements, the non-functional requirements are not expressed by some functionality the system must offer, but rather some behaviour or quality the system must posses. These are captured by a factor table, as described in \textbf{Larman}. The list of factors (requirements) the factor table consists of, was devised by using the FURPS+ mnemonic, and brainstorming on predictable requirements based on the business model. This facilitated a fruitful discussion on topics such as security, reliability and performance requirements of the system.
 

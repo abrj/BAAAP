@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  22 APR 2013 12:20
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  22 APR 2013 13:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -290,7 +290,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--4
 ]
 \openout2 = `Vision.aux'.
 
- (./Vision.tex) [4
+ (./Vision.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+
+ []
+
+) [4
 
 
 ]
@@ -329,7 +334,7 @@ ts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmr10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmti10.pfb>
-Output written on testmain.pdf (8 pages, 85589 bytes).
+Output written on testmain.pdf (8 pages, 85626 bytes).
 PDF statistics:
  51 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream
