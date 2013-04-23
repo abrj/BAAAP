@@ -1,10 +1,4 @@
 \part{Analysis}
-\vspace{30pt}
-\begin{center}
-\textit{Well begun is half done}
-\source{Aristotle}
-\end{center}
-\vspace{30pt}
 In this section, we will attempt to give the reader insight into the rationale behind the decisions made in the course of the project, by reflecting on challenges and surprises uncovered by analysing the problem area. In other words, the section will try to explain \textit{why} the system has been designed as it has and why the process has been managed the way it has.
 
 The section is structured by the various techniques and artefacts used in conducting the analysis. The primary topics covered in this section are:
@@ -115,22 +109,23 @@ These factors were consensually understood as the most crucial and/or interestin
 Another major part of our problem analysis was devising a model of the data, partly in order to construct and refine a database design for persisting the necessary data, and in part to serve for inspiration for C\# classes.
 This modelling was done using two artefacts, a domain to serve as a visual dictionary for objects and concepts in the problem domain, and an ER-diagram as an aid for reflecting on a useful database design. The main inspiration for these models were the use cases and the business model. These two artefacts serve the basis for discussions in this section.
 \subsection{Domain Model}
-The domain model was used to facilitate and document the results of a discussion of the problem domain. By modelling the objects and concepts in the problem domain, the project group came upon a number of questions, such as:
-\begin{itemize}
-\item 
-\end{itemize}
-\begin{center}
-\includegraphics[scale=0.15]{DomainModel.png}
-\end{center}
+Something about the domain model
+%The domain model was used to facilitate and document the results of a %discussion of the problem domain. By modelling the objects and concepts in the %problem domain, the project group came upon a number of questions, such as:
+%\begin{itemize}
+%\item 	
+%\end{itemize}
+%\begin{center}
+%\includegraphics[scale=0.15]{DomainModel.png}
+%\end{center}
 
 \subsection{ER-Diagram}
-
+The ER diagram reflects our considerations on which data should be captured and persisted by the system. 
 \begin{center}
 \includegraphics[scale=0.15]{ERDiagram.png}
 \end{center}
 
 \section{Architectural Analysis}
-In this section we will outline our efforts towards translating the requirements into a large scale organization of system namespaces, that is to say the logical architecture of the system. This is modelled using an UML package diagram, which will serve as the basis for the discussion in the following sections.
+In this section we will outline our efforts towards translating the functional and non functional requirements into a large scale organization of system namespaces, that is to say the logical architecture of the system. This is modelled using an UML package diagram, which will serve as the basis for the discussion.
 \subsection{Package Diagram}
 The package diagram below reflects bla bla bla
 \begin{center}
