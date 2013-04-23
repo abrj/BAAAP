@@ -133,15 +133,21 @@ The shoppingcart entity was added to accommodate a wish from the SMU group of wo
 \section{Architectural Analysis}
 In this section we will outline our efforts towards translating the functional and non functional requirements into a large scale organization of system namespaces, that is to say the logical architecture of the system. This is modelled using an UML package diagram, which will serve as the basis for the discussion.
 \subsection{Package Diagram}
-The package diagram below reflects the responsibilities identified by developing the use cases, and in part the non-functional requirements of the factor table. For example, the need for 
+The package diagram below reflects the responsibilities identified by developing the use cases, and in part the non-functional requirements of the factor table. For example, the need for restricting access to videos dictates the existence of of modules handling authentication and authorization, which in the model is delegated to the UserManagement package. The level of abstraction used in the diagram is very high, and is intended as inspiration for classes and namespaces, for improving understanding of the system, but not as an exact specification.
 \begin{center}
 \includegraphics[scale=0.15]{PackageDiagram.png}
 \end{center}
+The WCF package assumes responsibility of exposing the service interface to clients, including which ever configuration is necessary for achieving this. Responsibility of adding items to, removing items from, emptying and checking out the shopping cart is delegated to the Finance package, in addition to making deposits to the users' RentIt credit balances.
+The VideoManagement package is responsible for creating streams for the appropiate video files upon request, as well as generating links that can be used to download videos, in addition to limiting access to these links as to make them available only to paying customers. Finally, the Persistence package is responsible for saving data and coordinating requests to the underlying persistence technology.
+
+A detailed discussion of possible technical approaches to realising the requirements within the proposed architecture is deferred to the next section.
 \subsection{Technology Considerations}
+A discussion of the following topics:\\
 REST VS SOAP\\
 HTML5 vs Silverlight\\
 Facebook Login vs WCF login\\
 PayPal\\
 Ads\\
+Database tech
 Preventing unauthorized downloading\\
 \section{Project Management Plan}
