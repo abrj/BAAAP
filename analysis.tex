@@ -107,28 +107,41 @@ These factors were consensually understood as the most crucial and/or interestin
 
 \section{Data Modelling}
 Another major part of our problem analysis was devising a model of the data, partly in order to construct and refine a database design for persisting the necessary data, and in part to serve for inspiration for C\# classes.
-This modelling was done using two artefacts, a domain to serve as a visual dictionary for objects and concepts in the problem domain, and an ER-diagram as an aid for reflecting on a useful database design. The main inspiration for these models were the use cases and the business model. These two artefacts serve the basis for discussions in this section.
+This modelling was done using two artefacts, a domain model to serve as a visual dictionary for objects and concepts in the problem domain, and an ER-diagram as an aid for reflecting on a useful database design. These two artefacts serve the basis for discussions in this section.
 \subsection{Domain Model}
 Something about the domain model
 %The domain model was used to facilitate and document the results of a %discussion of the problem domain. By modelling the objects and concepts in the %problem domain, the project group came upon a number of questions, such as:
 %\begin{itemize}
 %\item 	
 %\end{itemize}
-%\begin{center}
-%\includegraphics[scale=0.15]{DomainModel.png}
-%\end{center}
+\begin{center}
+\includegraphics[scale=0.15]{DomainModel.png}
+\end{center}
 
 \subsection{ER-Diagram}
-The ER diagram reflects our considerations on which data should be captured and persisted by the system. 
+The ER diagram on the following page reflects our considerations on which data should be captured and persisted by the system. The video and user entities constitute the bare minimum of required data to implement the core functionality of video streaming and user management, and the remaining entities capture the data needed to record either deposits and payments, or the data needed to perform statistical analysis for e.g making recommendations to individual users.
 \begin{center}
 \includegraphics[scale=0.15]{ERDiagram.png}
 \end{center}
+The transaction, rented and bought tables together capture the financial activities of the users, in that transactions capture deposits, or payments by users for videos, and rented and bought capture the respective purchase histories of users. 
+We later realised that this design is a flawed, as it allows for inconsistency between recorded purchases and financial transactions. A better design would have been to record a transaction with each rent- or buy history, and discard recording videos associated with a financial transaction directly in the transaction table.
+
+Another noteworthy detail is the relationship between the price entity and the video entity. The reason to keep prices enumerated by category in a separate table, as opposed to recording it directly in the video table, is the business model requirement of allowing for user generated content. Defining a set of price categories that uploaders could choose from simplifies the upload process, as well as maintaining consistent pricing for different videos.
+
+The shoppingcart entity was added to accommodate a wish from the SMU group of working with shopping cart functionality. Originally, the intent was for users to simply pay directly for each video separately when viewing it, either by renting or buying it. However, it was implemented since the SMU group was quite keen on the functionality, and it was very easily added to our existing model.
 
 \section{Architectural Analysis}
 In this section we will outline our efforts towards translating the functional and non functional requirements into a large scale organization of system namespaces, that is to say the logical architecture of the system. This is modelled using an UML package diagram, which will serve as the basis for the discussion.
 \subsection{Package Diagram}
-The package diagram below reflects bla bla bla
+The package diagram below reflects the responsibilities identified by developing the use cases, and in part the non-functional requirements of the factor table. For example, the need for 
 \begin{center}
 \includegraphics[scale=0.15]{PackageDiagram.png}
 \end{center}
+\subsection{Technology Considerations}
+REST VS SOAP\\
+HTML5 vs Silverlight\\
+Facebook Login vs WCF login\\
+PayPal\\
+Ads\\
+Preventing unauthorized downloading\\
 \section{Project Management Plan}
