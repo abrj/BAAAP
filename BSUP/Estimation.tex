@@ -14,8 +14,24 @@
 
 The Program (or Project) Evaluation and Review Technique, commonly known as PERT, is one of the more successful techniques in use in project planing today. The technique itself includes quite a lot of theory behind structuring tasks and their dependencies with each other, but also includes it own method of estimating.\\
 
-The estimations in PERT relies on making multiple estimates for each task, and using that to calculate a weighted average. The estimates consists of a ``best case'', ``most likely'' and a ``worst case'' estimates. The weighted average is calculated is calculated as follows
-$\frac{best+4*likely+best}{6}$
+The estimations in PERT relies on making multiple estimates for each task, and using that to calculate a weighted average. The estimates consists of a ``best case'', a ``most likely'' and a ``worst case'' estimate. The weighted average is calculated as follows
+$\frac{best+4*likely+worst}{6}$
+, resulting in a number that is centred around the likely estimate, but can tilt to either sides.\
+ 
+This estimate, or median, is a better guess for how long a task will take to fulfil. But there is still a deviation. We here talk about the standard deviation, which we calculate as such
+$\frac{worst-best}{6}$
+, and represents the ``tilt'' in the estimate. With this, we can interpret our median and the original three estimates as a probability, how likely a task is to finish within a time frame. This probability is not certain, but depends on different beta distributions used to express the spread of the likelihood !!REFERENCE!!. This is a bigger mathematical and statistic problem, which we will not discuss.\
+
+A general distribution for this is though used a many projects and gives a pretty good picture of how these estimates can be used.\
+\begin{itemize}
+
+
+\item The PERT estimate itself (the median) accounts for 50 \% of the probability.
+\item Pert estimate + standard deviation = 84 \% probability.
+\item Pert estimate + 2 x standard deviation = 97.5 \% probability.
+\item Pert estimate + 3 x standart deviation = 99.5 \% probability.
+\end{itemize}
+An example would be that...
 
 
 \subsection{Our experience}
