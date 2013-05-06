@@ -55,25 +55,41 @@ $\frac{best+4*likely+worst}{6}$
  
 This estimate, or median, is a better guess for how long a task will take to fulfil. But there is still a deviation. We here talk about the standard deviation, which we calculate as such
 $\frac{worst-best}{6}$
-, and represents the ``tilt'' in the estimate. With this, we can interpret our median and the original three estimates as a probability, how likely a task is to finish within a time frame. This probability is not certain, but depends on different beta distributions used to express the spread of the likelihood !!REFERENCE!!. This is a bigger mathematical and statistic problem, which we will not discuss.\
+, and represents the ``tilt'' in the estimate. With this, we can interpret our median and the original three estimates as a probability, how likely a task is to finish within a time frame. This probability is not certain, but depends on different beta distributions used to express the spread of the likelihood !!REFERENCE!!. This is a bigger mathematical and statistic problem, which we will not discuss, but more can be found in the article !!REFERENCE!!.\
 
 A general distribution for this is though used a many projects and gives a pretty good picture of how these estimates can be used.\
 \begin{itemize}
 
 
 \item The PERT estimate itself (the median) accounts for 50 \% of the probability.
-\item Pert estimate + standard deviation = 84 \% probability.
-\item Pert estimate + 2 x standard deviation = 97.5 \% probability.
-\item Pert estimate + 3 x standart deviation = 99.5 \% probability.
+\item Pert estimate +/- standard deviation = 84 \% probability.
+\item Pert estimate +/- 2 x standard deviation = 97.5 \% probability.
+\item Pert estimate +/- 3 x standard deviation = 99.5 \% probability.
 \end{itemize}
-An example would be that...
+An example would be that the three estimates of 3/5/10 hours would give you a median of 5.5, and a standard deviation of 1.17. So there is a 50 \% chance the task will be finished within 5.5 hours, but adding the standard deviation there is a 99.5 \% chance the task is finished in 1.9-9.1 hours.\
+The PERT-estimate and deviations no longer directly reflects the original estimate, and have drifted somewhat, but these new numbers, derived from a probability, should end up being truer than what the team originally estimated. \\
+
 
 
 \subsection{Our experience}
+Utilizing this technique was a new experience for us, and changed the way we had formerly viewed estimation. The very scientific approach, utilizing mathematical analysis to achieve our results, help us to distance ourself from the different tasks, and sped up the process of estimation. The feeling that our guesses would not be the precise and final estimate, drove us to discuss less in terms of how much time we thought would be used for a task, and more in the lines of how uncertain we were about what would be needed for the task to be successfully finished within the deadline. \\
+
+Beginning the sprint and starting implementation and completing tasks, we did though get a bit detached from the estimates, because of the very "floating" nature for the numbers, due to them being probabilities instead of actual estimates. This detachment combined with the fact that during this sprint a lot of unexpected work arose from our international collaboration, made the accuracy of these estimates hard to judge. \\
 
 \subsubsection{Pros}
+\begin{itemize}
+\item The time it takes to make the estimates is reduced by calculating the deviations mathematically instead of basing it around a discussion.
+\item Giving a variable and broad intervals of estimation helps to visualise the estimates as part of a process, not just some arbitrary number.
+\item Having a deviation to go by makes it easier to quickly spot if a task is within an acceptable range from the median estimate, not having to judge it "by eye".
+
+\end{itemize}
 
 \subsubsection{Cons}
+\begin{itemize}
+\item Detachment from the estimates, seeing them as probabilities, makes it harder to follow them during the implementation process.
+\item When making the estimates it can be tempting to not think each sub-estimate through, as it will be "hidden" behind the calculated estimate.
+
+\end{itemize}
 
 \section{Third technique: ...}
 \subsection{Theory}
