@@ -48,7 +48,7 @@ Planning Poker:
 \subsubsection{Cons}
 
 Delphi:
-- Only the average estimate are shown which creates no direct incentive for discussions
+- Only the average estimate is shown which creates no direct incentive for discussions
 
 Planning Poker:
 - All estimates are shown, which can be negative if some team members try to overrule the others
@@ -58,25 +58,27 @@ Planning Poker:
 \section{Second technique: PERT}
 \subsection{Theory}
 
-The Program (or Project) Evaluation and Review Technique, commonly known as PERT, is a widely used techniques in use in project planing today. The technique itself includes quite a lot of theory behind structuring tasks and their dependencies with each other, but also includes it own method of estimating. There is an explanation of a very simple version of this method in \cite[p.152]{ProjectManagement_b}, but the following have taken some extended point from \cite{TynerBlain_w} among others\\
+The Program (or Project) Evaluation and Review Technique, commonly known as PERT, is a widely used technique used in project planning today. The technique itself includes quite a lot of theory behind structuring tasks and their dependencies with each other, but also includes its own method of estimating. There is an explanation of a very simple version of this method in \cite[p.152]{ProjectManagement_b}, but the following have taken some extended point from \cite{TynerBlain_w} among others\\
 
 The estimations in PERT relies on making multiple estimates for each task, and using that to calculate a weighted average. The estimates consists of a ``best case'', a ``most likely'' and a ``worst case'' estimate. The weighted average is calculated as follows
 $\frac{best+4*likely+worst}{6}$
-, resulting in a number that is centred around the likely estimate, but can tilt to either sides.\
+, resulting in a number that is centered around the likely estimate, but can tilt to either sides.\
  
-This estimate, or median, is a better guess for how long a task will take to fulfil. But there is still a deviation. We here talk about the standard deviation, which we calculate as 
+This estimate, or median, is a better guess for how long a task will take to complete. But there is still a deviation. Here we talk about the standard deviation, which we calculate as 
 $\frac{worst-best}{6}$
 , and represents the uncertainty in the estimate. With this, we can interpret our median of the original three estimates as a probability, how likely a task is to finish within a time frame. \
-This is done by distributing the probability across the time frame, some how resembling of a \textit{normal distribution}. Cumulating between two time estimates, can then give you the probability of how likely the task is to finish sometime within the timespan of the two estimates [See fig. something]. \
+
+This is done by distributing the probability across the time frame, somehow resembling of a \textit{normal distribution}. Cumulating between two time estimates, can then give you the probability of how likely the task is to finish sometime within the timespan of the two estimates [See fig. something link : \url{http://sehlhorst.smugmug.com/photos/567772949_MtdxD-L.png}].]. \
+
 \begin{center}
 \includegraphics[scale=0.5]{PERTDistribution.png} 
 \
-\textit{There is nearly a hundret percent chance the task will finish sometime between 2 and 6 hours}
+\textit{There is nearly a hundred percent chance the task will finish sometime between 2 and 6 hours}
 \end{center}
 
 Choosing how to do this distribution is though a bigger mathematical and statistical problem, which we will not discuss here, since it is out of scope.
 
-For our purpose some general distribution for this is though used in many projects and gives a pretty good picture of how these estimates can be used. These are taken from [Wiki: Three-Point Estimation]\
+For our purpose some general distribution for this is though used in many projects and gives a pretty good picture of how these estimates can be used. These are taken from \cite{3point_w}\
 \begin{itemize}
 
 \item The PERT estimate = 50 \% probability.
@@ -90,7 +92,7 @@ The PERT-estimate and deviations no longer directly reflects the original estima
 
 
 \subsection{Our experience}
-Utilizing this technique was a new experience for us, and changed the way we had formerly viewed estimation. The very scientific approach, utilizing mathematical analysis to achieve our results, help us to distance ourself from the different tasks, and sped up the process of estimation. The feeling that our guesses would not be the precise and final estimate, drove us to discuss less in terms of how much time we thought would be used for a task, and more in the lines of how uncertain we were about what would be needed for the task to be successfully finished within the deadline. \\
+Utilizing this technique was a new experience for us, and changed the way we had formerly viewed estimation. The very scientific approach, utilizing mathematical analysis to achieve our results, helped us to distance ourself from the different tasks, and sped up the process of estimation. The feeling that our guesses would not be the precise and final estimate, drove us to discuss less in terms of how much time we thought would be used for a task, and more in the lines of how uncertain we were about what would be needed for the task to be successfully finished within the deadline. \\
 
 Beginning the sprint and starting implementation and completing tasks, we did though get a bit detached from the estimates, because of the very "floating" nature for the numbers, due to them being probabilities instead of actual estimates. This detachment combined with the fact that during this sprint a lot of unexpected work arose from our international collaboration, made the accuracy of these estimates hard to judge. \\
 
@@ -109,7 +111,7 @@ Beginning the sprint and starting implementation and completing tasks, we did th
 
 \end{itemize}
 
-To conclude, our experience with PERT was mixed. The ease of estimation is one of the biggest pros, and the step back from just viewing estimates as simple numbers. But for our scope, this detachment from the estimates proved a bit to much.
+To conclude, our experience with PERT was mixed. The ease of estimation is one of the biggest pros, and the step back from just viewing estimates as simple numbers. But for our scope, this detachment from the estimates proved a bit too much.
 
 \section{Third technique: Direct estimation based on project breakdown}
 \subsection{Theory}
@@ -124,7 +126,7 @@ Our experience with the direct estimation technique has been a little vague. We 
 - If the estimators possess a decent amount of knowledge and experience within the subjects of the tasks, very reliable estimates can be given. 
 
 \subsubsection{Cons}
-- This technique can be difficult to use in the beginning phase of a project, since here it is not always that all necessary information is available.
+- This technique can be difficult to use in the beginning phase of a project, since it is not always here that all necessary information is available.
 - The direct estimation technique can be very time consuming, and thereby costly, to use.
 - If the estimators are inexperienced the time and resources used on estimation can possibly be wasted
 
@@ -146,17 +148,17 @@ But even with this buffer, the estimates were still of, and at the end of the sp
 
 The process of estimating itself was though one of the quickest of the project. We got a good feeling for the estimates as probabilities, but we might have lacked some of the grounding in the tasks themselves. This carried over to the phase of implementing the tasks, making it hard to re-estimate how much time was left, as task and estimate was not that connected any more. A different experience all together. \\
 
-Our third sprint was centred around the technique "Direct estimation based on project breakdown". The experience here was very similar to the one we had with PP where the project was broken down into smaller tasks before an estimate was placed by each team member. The main difference that we found, is that the technique does not directly encourage you to discuss the estimates as much as the PP technique, even though it is sort of implied in order to find common ground.
+Our third sprint was centered around the technique "Direct estimation based on project breakdown". The experience here was very similar to the one we had with PP where the project was broken down into smaller tasks before an estimate was placed by each team member. The main difference that we found, is that the technique does not directly encourage you to discuss the estimates as much as the PP technique, even though it is sort of implied in order to find common ground.\\
 
-\subsubsection{Directly comparing estimation of tasks}
-
+\subsubsection{Direct comparison of estimating tasks}
 From the events that happened during our international collaboration, a few features was pushed to the next sprint, and was hence estimated both with Planning Poker and PERT. As to not mix the results of the processes up, we did not take the estimates from PP into consideration during the PERT technique. This resulted in two quite different estimates, but they mirror many of our observations.
 
 The Planning Poker ended up with five sub-tasks for the feature of uploading media, adding up to a total of 10 hours of work. When it came to PERT we had some experience from the first sprint, and our estimates were a bit more cautious. We made it as just one task, and estimated it would take 18 hours with 6 hours of uncertainty.
 
-In the end the feature of uploading a video took about 20 hours to implement. Here the PERT estimate were closest and actually within the error margin. But considering what the sub-tasks from PP consisted of, 10 hours is not far of, seeing as there is no sub-task for sending the video over the network, which ended up being the biggest hurdle in this. This proves that the breaking down of the task, and discussing them during the PP estimations, produced solid tasks and estimates, that was thought through. But it also shows, that if enough information and knowledge is at hand, bigger tasks can sufficiently be estimated with PERT, giving a reasonable margin of error.   
+In the end the feature of uploading a video took about 20 hours to implement. Here the PERT estimate were closest and actually within the error margin. But considering what the sub-tasks from PP consisted of, 10 hours is not far of, seeing as there is no sub-task for sending the video over the network, which ended up being the biggest hurdle in this. This proves that the breaking down of the task, and discussing them during the PP estimations, produced solid tasks and estimates, that was thought through. But it also shows, that if enough information and knowledge is at hand, bigger tasks can sufficiently be estimated with PERT, giving a reasonable margin of error. \\
 
 \subsection{Most successful technique}
+
 
 
 
