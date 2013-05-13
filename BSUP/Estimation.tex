@@ -68,7 +68,7 @@ This estimate, or median, is a better guess for how long a task will take to com
 $\frac{worst-best}{6}$
 , and represents the uncertainty in the estimate. With this, we can interpret our median of the original three estimates as a probability, how likely a task is to finish within a time frame. \
 
-This is done by distributing the probability across the time frame, somehow resembling of a \textit{normal distribution}. Cumulating between two time estimates, can then give you the probability of how likely the task is to finish sometime within the timespan of the two estimates [See fig. something link : http://sehlhorst.smugmug.com/photos/567772949_MtdxD-L.png].]. \
+This is done by distributing the probability across the time frame, somehow resembling of a \textit{normal distribution}. Cumulating between two time estimates, can then give you the probability of how likely the task is to finish sometime within the timespan of the two estimates [See fig. something link : \url{http://sehlhorst.smugmug.com/photos/567772949_MtdxD-L.png}].]. \
 
 \begin{center}
 \includegraphics[scale=0.5]{PERTDistribution.png} 
@@ -136,29 +136,43 @@ Our experience with the direct estimation technique has been a little vague. We 
 In this section we will compare the efficiency of the tested estimation techniques against the deadlines they help set, and discuss the reasons, conditions and constraints that have led to these different outcomes.
 
 \subsection{Precision of estimation}
-The optimal way to compare these techniques, would have been to estimate the exact same tasks, for the exact same project, on the exact same day. The we could just have seen what method gave the most precise estimate. Because of time constraint, as the project we estimated had a different purpose and goal than this report, this was not possible. Therefore we can not just do a side-by-side comparison of the three methods because we have applied them to somewhat different parts of the project. We will still try to evaluate the precision of each technique, but also how it impacted the process of estimating, and the effects later in the implementation of the tasks that have been estimated. \\
+The optimal way to compare these techniques, would have been to estimate the exact same tasks, for the exact same project, on the exact same day. The we could just have seen what method gave the most precise estimate. Because of time constraint, as the project we estimated had a different purpose and goal than this report, this was not possible. Therefore we can not just do a side-by-side comparison of the three methods because we have applied them to somewhat different parts of the project. We will still try to evaluate the precision of each technique, but also how it impacted the process of estimating, and the effects later in the implementation of the tasks that have been estimated. \
+
+
+
+Delphi/Planning Poker
 
 The technique used to estimate the tasks for our first sprint gave us some valuable info about each of the specific tasks chosen. Whenever we had an estimation disagreement then the following discussion led to a greater insight about the task in question. This meant that each team member obtained a good overview of the project in general, which was helpful both during the initial as well as the following sprints.
 
-The precision of our estimates were pretty decent compared to the actual results. However, there were some complications regarding the collaboration with the Singaporeans. We had a situation during the first sprint where we had to complete some tasks that was not a part of the sprint to begin with, due to an urgent request from their side. This meant that we basically completed a weeks worth of tasks during a single day. But since not all tasks had been initially estimated and included in the sprint it somewhat made it difficult to give a solid overview of the efficiency of the estimation technique. \\
+The precision of our estimates were pretty decent compared to the actual results. However, there were some complications regarding the collaboration with the Singaporeans. We had a situation during the first sprint where we had to complete some tasks that was not a part of the sprint to begin with, due to an urgent request from their side. This meant that we basically completed a weeks worth of tasks during a single day. But since not all tasks had been initially estimated and included in the sprint it somewhat made it difficult to give a solid overview of the efficiency of the estimation technique. 
 
-When looking at the precision of the estimates, the PERT estimations have the positive point, of already having a buffer from the start, given by the calculated uncertainty. For our second sprint, when we applied PERT for our estimation, we had 100.5 hours of available work time for our team. We made our estimates, and decided on tasks representing 104.5 hours of work, with the buffer telling us that we should definitely be done within between 91.5 and 118 hours. So from the start, we knew we had a possibility of going over time. 
 
-But even with this buffer, the estimates were still of, and at the end of the sprint we had more than 30 hours of work left. About double the deviation we had already applied. So in this aspect PERT did not fair well. This could very well be connected to the fact, that we did not get in to discussing the tasks very much, so especially some of the bigger tasks went proportionally a lot over the estimates. 
+
+When looking at the precision of the estimates, the PERT estimations have the positive point, of already having a buffer from the start, given by the calculated uncertainty. For our second sprint, when we applied PERT for our estimation, we had 100.5 hours of available work time for our team. We made our estimates, and decided on tasks representing 104.5 hours of work, with the buffer telling us that we should definitely be done within between 91.5 and 118 hours. So from the start, we knew we had a possibility of going over time. \
+
+But even with this buffer, the estimates were still of, and at the end of the sprint we had more than 30 hours of work left. About double the deviation we had already applied. So in this aspect PERT did not fair well. This could very well be connected to the fact, that we did not get in to discussing the tasks very much, so especially some of the bigger tasks went proportionally a lot over the estimates. \
 
 The process of estimating itself was though one of the quickest of the project. We got a good feeling for the estimates as probabilities, but we might have lacked some of the grounding in the tasks themselves. This carried over to the phase of implementing the tasks, making it hard to re-estimate how much time was left, as task and estimate was not that connected any more. A different experience all together. \\
 
-Our third sprint was centred around the technique "Direct estimation based on project breakdown". The experience here was very similar to the one we had with PP where the project was broken down into smaller tasks before an estimate was placed by each team member. The main difference that we found, is that the technique does not directly encourage you to discuss the estimates as much as the PP technique, even though it is sort of implied in order to find common ground.
 
-\subsubsection{Directly comparing estimation of tasks}
+Our third sprint was centered around the technique "Direct estimation based on project breakdown". The experience here was very similar to the one we had with PP where the project was broken down into smaller tasks before an estimate was placed by each team member. The main difference that we found, is that the technique does not directly encourage you to discuss the estimates as much as the PP technique, even though it is sort of implied in order to find common ground.
 
-From the events that happened during our international collaboration, a few features was pushed to the next sprint, and was hence estimated both with Planning Poker and PERT. As to not mix the results of the processes up, we did not take the estimates from PP into consideration during the PERT technique. This resulted in two quite different estimates, but they mirror many of our observations.
 
-The Planning Poker ended up with five sub-tasks for the feature of uploading media, adding up to a total of 10 hours of work. When it came to PERT we had some experience from the first sprint, and our estimates were a bit more cautious. We made it as just one task, and estimated it would take 18 hours with 6 hours of uncertainty.
 
-In the end the feature of uploading a video took about 20 hours to implement. Here the PERT estimate were closest and actually within the error margin. But considering what the sub-tasks from PP consisted of, 10 hours is not far of, seeing as there is no sub-task for sending the video over the network, which ended up being the biggest hurdle in this. This proves that the breaking down of the task, and discussing them during the PP estimations, produced solid tasks and estimates, that was thought through. But it also shows, that if enough information and knowledge is at hand, bigger tasks can sufficiently be estimated with PERT, giving a reasonable margin of error. 
+From the events that happened during our international collaboration, a few features was pushed to the next sprint, and was hence estimated both with Planning Poker and PERT. As to not mix the results of the processes up, we did not take the estimates from PP into consideration during the PERT technique. This resulted in two quite different estimates, but they mirror many of our observations.\
 
-\subsection{Most successful technique}
+The Planning Poker ended up with five sub-tasks for the feature of uploading media, adding up to a total of 10 hours of work. When it came to PERT we had some experience from the first sprint, and our estimates were a bit more cautious. We made it as just one task, and estimated it would take 18 hours with 6 hours of uncertainty.\
+
+In the end the feature of uploading a video took about 20 hours to implement. Here the PERT estimate were closest and actually within the error margin. But considering what the sub-tasks from PP consisted of, 10 hours is not far of, seeing as there is no sub-task for sending the video over the network, which ended up being the biggest hurdle in this. This proves that the breaking down of the task, and discussing them during the PP estimations, produced solid tasks and estimates, that was thought through. But it also shows, that if enough information and knowledge is at hand, bigger tasks can sufficiently be estimated with PERT, giving a reasonable margin of error. \
+
+
+\begin{itemize}
+\item How do different estimation techniques affect the teams' ability to meet project deadlines?
+
+\item How does the working conditions influence the precision and usefulness of the various estimation techniques?	
+
+\item Is one estimation technique more appropriate than others in a project of size and scope similar to a 4 month university project?
+\end{itemize}
 
 
 
