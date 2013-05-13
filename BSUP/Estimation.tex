@@ -48,7 +48,7 @@ Planning Poker:
 \subsubsection{Cons}
 
 Delphi:
-- Only the average estimate are shown which creates no direct incentive for discussions
+- Only the average estimate is shown which creates no direct incentive for discussions
 
 Planning Poker:
 - All estimates are shown, which can be negative if some team members try to overrule the others
@@ -58,16 +58,16 @@ Planning Poker:
 \section{Second technique: PERT}
 \subsection{Theory}
 
-The Program (or Project) Evaluation and Review Technique, commonly known as PERT, is a widely used techniques in use in project planing today. The technique itself includes quite a lot of theory behind structuring tasks and their dependencies with each other, but also includes it own method of estimating. There is an explanation of a very simple version of this method in \cite[p.152]{ProjectManagement_b}, but the following have taken some extended point from \cite{TynerBlain_w} among others\\
+The Program (or Project) Evaluation and Review Technique, commonly known as PERT, is a widely used technique used in project planning today. The technique itself includes quite a lot of theory behind structuring tasks and their dependencies with each other, but also includes its own method of estimating. There is an explanation of a very simple version of this method in \cite[p.152]{ProjectManagement_b}, but the following have taken some extended point from \cite{TynerBlain_w} among others\\
 
 The estimations in PERT relies on making multiple estimates for each task, and using that to calculate a weighted average. The estimates consists of a ``best case'', a ``most likely'' and a ``worst case'' estimate. The weighted average is calculated as follows
 $\frac{best+4*likely+worst}{6}$
-, resulting in a number that is centred around the likely estimate, but can tilt to either sides.\
+, resulting in a number that is centered around the likely estimate, but can tilt to either sides.\
  
-This estimate, or median, is a better guess for how long a task will take to fulfil. But there is still a deviation. We here talk about the standard deviation, which we calculate as 
+This estimate, or median, is a better guess for how long a task will take to complete. But there is still a deviation. Here we talk about the standard deviation, which we calculate as 
 $\frac{worst-best}{6}$
 , and represents the uncertainty in the estimate. With this, we can interpret our median of the original three estimates as a probability, how likely a task is to finish within a time frame. \
-This is done by distributing the probability across the time frame, some how resembling of a \textit{normal distribution}. Cumulating between two time estimates, can then give you the probability of how likely the task is to finish sometime within the timespan of the two estimates [See fig. something]. \
+This is done by distributing the probability across the time frame, somehow resembling of a \textit{normal distribution}. Cumulating between two time estimates, can then give you the probability of how likely the task is to finish sometime within the timespan of the two estimates [See fig. something]. \
 \begin{center}
 \includegraphics[scale=0.5]{PERTDistribution.png} 
 \
