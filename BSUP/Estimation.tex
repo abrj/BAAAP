@@ -75,13 +75,14 @@ This estimate, or median, is a better guess for how long a task will take to com
 $\frac{worst-best}{6}$
 , and represents the uncertainty in the estimate. With this, we can interpret our median of the original three estimates as a probability of how likely a task is to finish within a given time frame. \
 
-This is done by distributing the probability across the time frame, somehow resembling a \textit{normal distribution}. Cumulating between two time estimates, can then give you the probability of how likely the task is to finish sometime within the timespan of the two estimates [See fig. something link : \url{http://sehlhorst.smugmug.com/photos/567772949_MtdxD-L.png}].]. \
+This is done by distributing the probability across the time frame, somehow resembling a \textit{normal distribution}. Cumulating between two time estimates, can then give you the probability of how likely the task is to finish sometime within the timespan of the two estimates as seen in figure \ref{TynerBlain_figure}. \
 
 
-\begin{figure}[tbh]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{PERTDistribution.png} 
 \caption{Nearly a hundred percent chance the task will finish sometime between 2 and 6 hours \protect\cite{TynerBlain_graph_w}}
+\label{TynerBlain_figure}
 \end{figure}
 
 
@@ -89,7 +90,7 @@ This is done by distributing the probability across the time frame, somehow rese
 
 Choosing how to do this distribution is though a bigger mathematical and statistical problem, which we will not discuss here, since it is out of scope.
 
-For our purpose some general distribution for this is though used in many projects and gives a pretty good picture of how these estimates can be used. These are taken from \cite{3point_w}\
+For our purpose some general distribution for this is though used in many projects and gives a pretty good picture of how these estimates can be used. These are taken from the website, which can be found in appendix \cite{3point_w}\
 \begin{itemize}
 
 \item The PERT estimate = 50 \% probability.
@@ -176,7 +177,6 @@ In the end the feature of uploading a video took about 20 hours to implement. He
 
 \section{Summary}
 This concludes the walk through of the techniques, that we have used in the RentIt project. We have explained the theory behind the three applied techniques and listed the pros and cons for each technique. As mentioned, the techniques all have a chance of getting the estimates wrong, but we do not believe this is because of the techniques itself, but more the lack of experience from the group when defining and estimating tasks. 
-\subsection{Most successful technique}
 
 
 
