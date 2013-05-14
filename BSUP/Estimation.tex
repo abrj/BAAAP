@@ -57,6 +57,9 @@ Planning Poker:
 - Inexperience is a factor that might produce several wrong estimates if it involves the entire team
 - Can be time consuming
 
+#############Skriv en afsluttende bemærkning################
+
+
 \section{PERT}
 \subsection{Theory}
 
@@ -68,15 +71,18 @@ $\frac{best+4*likely+worst}{6}$
  
 This estimate, or median, is a better guess for how long a task will take to complete. But there is still a deviation. Here we talk about the standard deviation, which we calculate as 
 $\frac{worst-best}{6}$
-, and represents the uncertainty in the estimate. With this, we can interpret our median of the original three estimates as a probability, how likely a task is to finish within a time frame. \
+, and represents the uncertainty in the estimate. With this, we can interpret our median of the original three estimates as a probability of how likely a task is to finish within a given time frame. \
 
-This is done by distributing the probability across the time frame, somehow resembling of a \textit{normal distribution}. Cumulating between two time estimates, can then give you the probability of how likely the task is to finish sometime within the timespan of the two estimates [See fig. something link : \url{http://sehlhorst.smugmug.com/photos/567772949_MtdxD-L.png}].]. \
+This is done by distributing the probability across the time frame, somehow resembling a \textit{normal distribution}. Cumulating between two time estimates, can then give you the probability of how likely the task is to finish sometime within the timespan of the two estimates [See fig. something link : \url{http://sehlhorst.smugmug.com/photos/567772949_MtdxD-L.png}].]. \
+
 
 \begin{center}
 \includegraphics[scale=0.5]{PERTDistribution.png} 
-\textit{nearly a hundred percent chance the task will finish sometime between 2 and 6 hours}
-
 \end{center}
+\begin{center}
+\textit{nearly a hundred percent chance the task will finish sometime between 2 and 6 hours}
+\end{center}
+
 
 Choosing how to do this distribution is though a bigger mathematical and statistical problem, which we will not discuss here, since it is out of scope.
 
@@ -89,7 +95,7 @@ For our purpose some general distribution for this is though used in many projec
 \item Pert estimate +/- 3 x standard deviation = 99.7 \% probability.
 \end{itemize}
 An example would be that the three estimates of 3/5/10 hours would give you a median of 5.5, and a standard deviation of 1.17. So there is a 50 \% chance the task will be finished within 5.5 hours, but adding the standard deviation there is a 99.5 \% chance the task is finished in 1.9-9.1 hours.\
-The PERT-estimate and deviations no longer directly reflects the original estimate, and have drifted somewhat, but these new numbers, derived from a probability, should end up being truer than what the team originally estimated. \\
+The PERT-estimate and deviations no longer directly reflects the original estimate and have drifted somewhat. But these new numbers, derived from a probability, should end up being truer than what the team originally estimated. \\
 
 
 
@@ -118,11 +124,11 @@ To conclude, our experience with PERT was mixed. The ease of estimation is one o
 \section{Direct estimation based on project breakdown}
 \subsection{Theory}
 The direct estimation technique can be used in situations where a project has been broken down into smaller tasks. After a detailed list of tasks has been created, one or several estimators will give their assessment on the effort needed to perform each task. The total effort needed for the entire project is then calculated by summarizing all the individual task estimates.
-The technique is a good approach in the developing plans for sub-stages of a project, like an upcoming sprint while it is not that useful on the sprints that lies further ahead in the process. This is the main reason why we chose to implement it in our final sprint, since all remaining tasks were known and easy to estimate.
+The technique is a good approach in the developing plans for sub-stages of a project, like an upcoming sprint while it is not that useful on the sprints that lies further ahead in the process. This is the main reason why we chose to use it in our final sprint, since all remaining tasks were known and easy to estimate.
 
 
 \subsection{Our experience}
-Our experience with the direct estimation technique has been a little vague. We did not feel that it contributed with anything that was not already implemented in the previous tested methods or techniques. 
+Our experience with the direct estimation technique has been a little vague. We did not feel that it contributed with anything that was not already used in the previous tested methods or techniques. 
 
 \subsubsection{Pros}
 - If the estimators possess a decent amount of knowledge and experience within the subjects of the tasks, very reliable estimates can be given. 
@@ -131,6 +137,8 @@ Our experience with the direct estimation technique has been a little vague. We 
 - This technique can be difficult to use in the beginning phase of a project, since it is not always here that all necessary information is available.
 - The direct estimation technique can be very time consuming, and thereby costly, to use.
 - If the estimators are inexperienced the time and resources used on estimation can possibly be wasted
+
+#############Skriv en afsluttende bemærkning################
 
 
 \section{Comparison and results}
