@@ -2,13 +2,14 @@
 In the previous sections we have discussed and analysed different solutions to the requirements presented in the first part, under section \ref{Requirements}. We will now proceed with describing the implementation of the system and outline the features that fulfils the requirements.
 
 \section{Flow}
-To let the reader get a feel of the system at hand, we will in this section present different diagrams, with associated descriptions, which should ease the readers overall understanding of the system.
-As with many others systems, the user has to log in to get full access. As mentioned, we have chosen to use Facebook services, to assist with the login process. It is possible for the user, to get different lists of videos, but for any other servicecall, the user must provide his access token. To obtain this token a call made to the 'LoginWithFacebook' operation has to made. When the server receives the request it is processed like shown below:
+To let the reader get a feel of the system at hand, we will in this section present different diagrams, with associated descriptions, which should improve the readers overall understanding of the system.
+As with many others systems, the user has to log in to get full access. As mentioned, we have chosen to use Facebook services, to a ssist with the login process. It is possible for the user, to get different lists of videos, but for any other service request, the user must login. To do this, the client has to pass a valid Facebook token to server, which uses this token to contact Facebook, and extract the data needed to create the user in the system. The sequence is illustrated below:
 
 SD OF AUTHENTICATION
 
-As seen, the request goes to several classes, before ending up calling Facebook via the address pointing to the blue oval. This request to Facebook ensures that the app does something....!
-The next Facebook request to Facebook, is made to validate that the user has allowed the RentIt system app to access his data. If both requests responds with the correct information, the system proceeds with updating a map, containing all users that are logged in, with the newly user. This map is then used every time a user tries to call an operation, where validation is required. The WCF service then checks if the map already contains the given token and proceeds without futher requests to Facebook, if this is the case. Otherwise the validations proceeds as the above diagram shows. 
+The call issued from the service, results in several calls to Facebook being made. The first one validates the application, meaning the RentIt server contacts Facebook and obtains the id of app that was used to issue the token. This step is necessary because anyone can in theory register as a Facebook developer and obtain Facebook tokens and use them to access the server. By getting the id of app that issued the token, we can verify that is was issued by an app that is trusted by the RentIt service, i.e the SMU client or the ITU client.
+
+Next, the users information is validated by retrieving it from Facebook. If the user has not granted the issuing app access to the needed data
 After the user is authenticated correctly he is able to use most of the exploited services at the WCF. An example of this is showed at the diagram below:
 
 SD of StreamVideo
@@ -20,4 +21,6 @@ This shows the flow for the operation for 'StreamVideo'. First the user is valid
 
 
 \section{Security and Facebook}
+
+
 
