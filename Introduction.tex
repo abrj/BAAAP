@@ -11,23 +11,42 @@ For this project we have been giving a project description containing both a for
 The description also states that its necessary to develop a client application, which can be used to access the media files on the server, administrate these files and view and/or download the files. The technology used for this application is optional.\\
 
 \subsection{Requirements}
-The requirements from the project description can be outlined as list of requirements:
+The requirements from the project description can be outlined as list of requirements, divided in project Must-Have requirements and Nice-To-Have requirements:
+
 \subsubsection{Server}
+
+\textbf{Must-Have Requirements}
 \begin{itemize}
-\item Must support one or more WCF services, written in c-sharp
-\item Must be deployed on an IIS 7 Server
-\item Must use a Microsoft SQL database
-\item Must support multiple users using the same video file concurrently
-\item Must support both admin and normal user login (either by Facebook or Google), which gives different privileges
-\item Must support handling of both upload, rent, and download of files
-\item Must support search for media files in the database, based on arguments from the client
-\item Must be able to process and distribute payments between users and authors
-\item Must hold meta information about each video file which is displayed at the client application (more analytical information)
-\item Based on a users previous rented or bought video files the server must be able to show recommendations
-\item Must give users the option to rate a tutorial
+	\item Must support one or more WCF services, written in c-sharp
+	\item Must be deployed on an IIS 7 Server
+	\item Must use a Microsoft SQL database
+	\item The system will run in multi user environments
+	\item Users can register or create a new account, read (or display), update and delete (CRUD) account information. 			Negotiate the account information.
+	\item Users must be able to login.
+	\item Admin can add or create new product, read (or display), update and delete (CRUD) product information. 				Negotiate the product information. The display of the product should provide information such as the thumbnail 			image, category (for search), and analytic information (recent searches). It should support at least 2 media type 			(mpeg and avi).
+	\item Users can search for the product. Negotiate what information is needed for the search.
+	\item Users can rent and download product (without payment).
+	\item You can assume that there is already a player/viewer for the downloaded medias. Eg. Windows media player or 			VLC.
+	\item Most of the data should be stored in the server side.
+\end{itemize}
+\textbf{Nice-To-Have Requirements}
+\begin{itemize}
+	\item Based on a users previous rented or bought video files the server must be able to show recommendations
+	\item Must give users the option to rate a tutorial
+	\item Must support handling of both upload, rent, and download of files
+	\item Must be able to process and distribute payments between users and authors
+	\item Must support both admin and normal user login, which gives different privileges
 \end{itemize}
 
 \subsubsection{Client}
+textbf{Must-Have Requirements}
+\begin{itemize}
+	\item The UI for each of the features listed above. The usability is important. For example,
+	\item The login should not repeat the password.
+	\item CSS or template look and feel for each pages.
+	\item Online help, tutorials, tooltips, etc.
+\end{itemize}
+\textbf{Nice-To-Have Requirements}
 \begin{itemize}
 	\item A user must be able to log in using his facebook credentials
 	\item A user must be able to browse media files, sorted by rating
@@ -41,6 +60,8 @@ The requirements from the project description can be outlined as list of require
 	\item A user must be able to upload media files to the system
 	\item A user, which admin privileges, must be able to manage users and media files 
 \end{itemize}
+
+
 \section{Vision}
 In the following a system will be proposed, where it is possible for a user to rent, purchase and upload different kind of media files. These media files will be in the form of tutorials and the author of the file(s), will be paid through the system when the users purchases or rents the media file. The program will include a registry of available media files for the user, which have been tagged by the author. This gives the users the option to search for different files in categories and also rate the media files.\\
 
