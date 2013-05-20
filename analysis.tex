@@ -194,9 +194,11 @@ As mentioned, preventing users from using the streamed data obtained by renting 
 Since sensitive information is passed by the client to the service, such as login and credit card information, implementing a secure communication channel between two is an important security issue as well. An obvious approach to this would be to use SSL encryption to establish a HTTPS connection, since this can all be handled automatically by the WCF framework and the IIS hosting environment!!REFERENCE TIL LEARNING WCF KAPITEL 7 OG MSDN. However, configuring the server on which  the IIS environment is running requires rights that are not granted to students, so this would have to be done by the course lecturer, in addition to all subsequent changes to the certificate. For this reason, we have decided to delimit to project to not include encryption.
 
 \subsubsection{Finance}
-Users pay for videos using a credit card. This means that
+Users pay for videos using a credit card. This means that the credit card needs to be validated by some external system, in order to ensure that the card is valid. Again we have decided to take advantage of service oriented architecture, by using PayPal as a merchant service provider. PayPal has a sandboxed service endpoint which makes testing easy, without using an actual credit card.
 
 \subsubsection{Persistence}
-Database tech
+Microsoft SQL Server is installed on the server, which is the most obvious choice for persisting data. However, it might be worth considering using a Object Relational Mapping framework to translate from C\# objects to relational tables, in order to save writing a substantial number of lines of boilerplate code. The ORM framework included in .NET is called Entity framework, which is fairly well integrated with Visual Studio: tools include GUI editing of table mappings, discovering so called EntityObjects through connecting to a database, just to name a few. In addition, the Entity Framework works very well with the .NET LINQ construct, in that its possible to query so called EntitySets with LINQ queries, which is then translated to SQL.
+
+Another possibility is a framework called NHibernate, which offers much of the same functionality, but is not as tightly integrated with Visual Studio. Because of our familiarity with the Entity Framework, we decided to use the Entity Framework, in order to reduce development time on the persistence module of the system.
 
 \section{Project Management Plan}
