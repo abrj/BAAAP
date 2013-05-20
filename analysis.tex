@@ -142,7 +142,7 @@ The VideoManagement package is responsible for creating streams for the appropia
 
 A detailed discussion of possible technical approaches to realising the requirements within the proposed architecture is deferred to the next section.
 \subsection{Technology Considerations}
-One of the goals of conducting a thorough analysis of the requirements and architecture of the system under development, is to make an informed decision on how to best use existing technologies. In this section we will give the reader an overview of our thoughts on this subject. The following sections are structured by the topics they address:
+One of the goals of conducting a thorough analysis of the requirements and architecture of the system under development, is to make an informed decision on how to best use existing technologies and frameworks. In this section we will give the reader an overview of our thoughts on this subject. The following sections are structured by the topics they address:
 \begin{itemize}
 \item Web Service standard
 \item Client video streaming
@@ -150,17 +150,39 @@ One of the goals of conducting a thorough analysis of the requirements and archi
 \item Finance
 \item Persistence
 \end{itemize}
+
 \subsubsection{Web Service Standard}
 A formal requirement for the project is that the server is implemented using the Microsoft WCF framework. Consequential, the server operations will be exposed to clients as a service. The WCF framework offers a wide variety of possible standards to let clients communicate with it. The major decision in this regard is choosing which message format is most appropriate; SOAP or REST.
 
 choosing the SOAP standard has the advantage of being the WCF standard, which means using this option is likely to result in less configuration of the framework, thus saving the group some time and possibly grief. In addition, SOAP works equally well over a multitude of different networking protocols, since it does not depend on the HTTP vocabulary, in contrast to REST, which provides some flexibility. This adds little value to the project however, as there is no good reason to use anything other than the HTTP protocol for communicating with clients.
 
-Disadvantages of choosing SOAP over REST include the verbosity of the XML notation of SOAP messages, which cause them to be larger than the basic HTTP messages of REST. Moreover, 
+Disadvantages of choosing SOAP over REST include the verbosity of the XML notation of SOAP messages, which cause them to be larger than the basic HTTP messages of REST. Moreover, the choice of service standard affects the ease with which different clients will communicate with the service. For example, choosing REST which returns and accepts with JSON datatypes and therefore readily communicates with AJAX based clients, would make using  HTML5 video streaming quite easy. Using SOAP on the other hand would require a few extra contortions to extract the video information from the SOAP envelope, and play it using the HTML5 video element. On the other hand, .NET and Visual Studio have tools for working with the WSDL (Web Services Description Language) of SOAP services, in order to automatically serialize and de-serialize C\# data to SOAP envelopes. For this reason, streaming video clients written in C\#, such as WPF or Silverlight, should be straightforward to implement.
+
+Since the SMU group expressed preference to writing an ASP/AJAX client, there were strong arguments for supplying a REST service in order to make their lives easier. For implementing our own client, our own group is partial to HTML5 video aswell (for reasons which will be discussed in the next section), REST seemed like the better choice. in the end, using the REST standard to implement the service was chosen for its compatibility with HTML/AJAX.
+
 \subsubsection{Client Video Streaming}
-HTML5 vs Silverlight\\
+Another formal requirement for the project, was to implement a client for the RentIt service of our own. Firstly, this begs the question of whether to offer a desktop or web client. Offering a web client would allow it to be used on any platform that supports the web standards, which includes tablet and mobile devices. These devices could be supported by using a framework for adapting the user interface for the screen size of the specific device, like for example Bootstrap. Implementing desktop clients however, is much more familiar to the group, and could possibly save us some time for working on other features for system. Most importantly, the group deemed the learning 	outcome of working with web technologies to be greater of the two. Web technologies arguably play an increasing larger role in the landscape of IT products, and as such, familiarising ourselves with state of the art web standards would be well worth the effort. For this reason, the group chose to implement a web client rather than a desktop.
+
+After deciding on a web solution for the client part of the project, it was necessary to select the most appropriate technology for streaming video. The three major video streaming technologies, which can be considered web standards are Flash, HTML5 and Silverlight.
+Flash video streaming was off the table from the start, becouse it does not posses the quality of being a state of the art web standard, since it arguably has largely played out its role on the web. Working with Flash was not educationally interesting.
+
+HTML, being the de facto standard of everything on the web, will probably always be relevant to be familiar with as a software developer. The multimedia capabilities of HTML5, are increasingly being used by product providers, and is supported by all browsers on all platforms. However, using HTML5 for streaming video would make it difficult to prevent users from downloading the videos their own machines, for viewing even when the rent period had been exceeded, since HTML5 video treats the video elements exactly like any other resource, like a picture. This means that saving a video would only require the user to right-click the video element and select save as. Moreover, using HTML5 would make it cumbersome to use SOAP to communicate with the RentIt service, as dicussed above, since the streamed data would have to be extracted from the SOAP envelopes and placed somewhere and in some format the HTML element could point at.
+
+Silverlight suffers from some of the same diseases as Flash, in that Microsoft has abandoned the technology. There are a few commercial products that still depend on Silverlight, such as Netflix, but technologies that are not maintained by their providers are bound to disappear. As such the educational outcome of using is Silverlight is negligible. The technology does have the advantage however, of being part of the Microsoft technology stack, even though it is now considered legacy. This means that writing parts of the client in Silverlight could take advantage of the tools for working with SOAP services with WSDLs, which is the default service standard WCF.
+
+The HTML5 solution was chosen as the technology for handing video streaming for the following reasons:
+\begin{itemize}
+\item More interesting from an educational point of view
+\item More broadly supported by browsers and mobile platforms
+\end{itemize}
+
 \subsubsection{Security}
+The business model depends on the system being secure in a number of different regards. Firstly, the system must provide some means of offering authentication and authorization of users, in order to make sure that users will only be granted access to content once they have paid for it, and in the appropriate time frame. In addition, it should not be possible for a user to download a video, unless she has permanently bought it.
+
+WCF in itself provides tools for handling authentication and authorization, based on the ASP.NET authentication framework!!REFERENCE TIL PROGRAMMING WCF KAPITEL 7. 
 Facebook Login vs WCF login\\
 Preventing unauthorized downloading\\
+Encryption\\
 \subsubsection{Finance}
 PayPal\\
 Ads\\
