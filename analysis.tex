@@ -142,12 +142,29 @@ The VideoManagement package is responsible for creating streams for the appropia
 
 A detailed discussion of possible technical approaches to realising the requirements within the proposed architecture is deferred to the next section.
 \subsection{Technology Considerations}
-A discussion of the following topics:\\
-REST VS SOAP\\
+One of the goals of conducting a thorough analysis of the requirements and architecture of the system under development, is to make an informed decision on how to best use existing technologies. In this section we will give the reader an overview of our thoughts on this subject. The following sections are structured by the topics they address:
+\begin{itemize}
+\item Web Service standard
+\item Client video streaming
+\item Security
+\item Finance
+\item Persistence
+\end{itemize}
+\subsubsection{Web Service Standard}
+A formal requirement for the project is that the server is implemented using the Microsoft WCF framework. Consequential, the server operations will be exposed to clients as a service. The WCF framework offers a wide variety of possible standards to let clients communicate with it. The major decision in this regard is choosing which message format is most appropriate; SOAP or REST.
+
+choosing the SOAP standard has the advantage of being the WCF standard, which means using this option is likely to result in less configuration of the framework, thus saving the group some time and possibly grief. In addition, SOAP works equally well over a multitude of different networking protocols, since it does not depend on the HTTP vocabulary, in contrast to REST, which provides some flexibility. This adds little value to the project however, as there is no good reason to use anything other than the HTTP protocol for communicating with clients.
+
+Disadvantages of choosing SOAP over REST include the verbosity of the XML notation of SOAP messages, which cause them to be larger than the basic HTTP messages of REST. Moreover, 
+\subsubsection{Client Video Streaming}
 HTML5 vs Silverlight\\
+\subsubsection{Security}
 Facebook Login vs WCF login\\
+Preventing unauthorized downloading\\
+\subsubsection{Finance}
 PayPal\\
 Ads\\
+\subsubsection{Persistence}
 Database tech
-Preventing unauthorized downloading\\
+
 \section{Project Management Plan}
