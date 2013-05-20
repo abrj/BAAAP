@@ -8,11 +8,13 @@ As with many others systems, the user has to log in to get full access. As menti
 SD OF AUTHENTICATION
 
 As seen, the request goes to several classes, before ending up calling Facebook via the address pointing to the blue oval. This request to Facebook ensures that the app does something....!
-The next Facebook request to Facebook, is made to validate that the user has allowed the RentIt system app to access his data. If both requests responds with the correct information, the system proceeds with updating a map, containing all users that are logged in, with the newly user. This map is then used every time a user tries to call an operation, where validation is required. The WCF service then checks if the map already contains the given token and proceeds without futher requests to Facebook, if this is the case. Otherwise the validations proceeds as the above diagram shows.  
+The next Facebook request to Facebook, is made to validate that the user has allowed the RentIt system app to access his data. If both requests responds with the correct information, the system proceeds with updating a map, containing all users that are logged in, with the newly user. This map is then used every time a user tries to call an operation, where validation is required. The WCF service then checks if the map already contains the given token and proceeds without futher requests to Facebook, if this is the case. Otherwise the validations proceeds as the above diagram shows. 
+After the user is authenticated correctly he is able to use most of the exploited services at the WCF. An example of this is showed at the diagram below:
 
+SD of StreamVideo
 
-This RESTfull request to facebook uses the built-it class 'WebRequest', which takes an url to facebook as parameter and 
-REFERE TILbAGE TIL FACEBOOK KRAV
+This shows the flow for the operation for 'StreamVideo'. First the user is validated, either via the map or by Facebook. Afterwards the video is found in the database and converted into a stream, which is returned to the user. 
+
 
 \section{WCF operations and annotations}
 
