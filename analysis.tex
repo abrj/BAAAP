@@ -10,25 +10,26 @@ The section is structured by the various techniques and artefacts used in conduc
 \end{itemize}
 We begin the section by investigating and discussing the conceptual business model of the system.
 
-\section{Business modelling}
+\section{Business modelling} \label{BusinessModel}
 The following will present a business model, which will demonstrate the main ideas behind the our conceptualized system, the advantages and the possible threats.
 
 Throughout the extreme growth of the usage of the Internet, a similar growth has been seen for user-uploaded content, which have explode on sites like www.youtube.com and www.facebook.com. Especially media files, like video and picture, has surfaced all over these sites, mainly due to the fore coming of smartphones, with picture and video capturing capabilities. The content of these media files is often self-exposing, where people capture themselves or friends doing all kinds of different things and at different events. But other media file content is also extremely popular to upload, like news broadcasting, sport events, tutorials, movies etc. Our business concept will focus on tutorials.
 
-Tutorials have been widely exposed on Internet, where people are using the Internet increasingly to find solutions on how to do things themselves. Because of this, we have decided to develop a system, where a user can download and upload home made tutorials and get paid for providing these files for the system. The payments will be financed through advertisements on the tutorials or by user payment, when a user is buying a video tutorial. The users will also be able to search video tutorials by category, ratings on videos and tags.
+Tutorials have been widely exposed on Internet, where people are using the Internet increasingly to find solutions on how to do things themselves. Because of this, we have decided to develop a system, where a user can download and upload home made tutorials and get paid for providing these files for the system. The payments will be financed through advertisements on the tutorials or by user payment, when a user is buying a video tutorial. The users will also be able to search video tutorials by category and ratings.
 
 \subsection{Target group}
 The target group is expected to posses general IT knowledge and know how to use a computer at a basic level. The system will target users who wants to learn how to do things at home and by themselves and users that wants to learn about a special topic. The system will focus on tutorials of a specific subject, technology, and subjects comprised in this. This also means that the users will have to have some kind of interests which can be related to technology, why the system will only contain video tutorials of this sort. Since the system is focused on users with a certain interest, we do not exclude any particularly groups, as long as the users knows how to use a computer and internet browser.  
 
 \subsection{Threats}
-When developing a system like this, there will always be either threats or weaknesses, or both, related to the system. In this case, the most obvious threat, is the the competition from other similar sites. Video tutorials is a big part of the Internet and therefore there already is a lot of websites and programs, that offers the same content to users. And on top of that, users will have to pay for videos without advertisements on this system, which similar sites and programs offers for free. Another threat is the fact that the video content for the users, will be user generated and for at start, this content will be very limited, until the system have been exposed and users starts to upload tutorials.
+When developing a system like this, there will always be either threats or weaknesses, or both, related to the system. In this case, the most obvious threat, is the competition from other similar sites. Video tutorials is a big part of the Internet and therefore there already is a lot of websites and programs, that offers the same content to users. And on top of that, users will have to pay for videos without advertisements on this system, which similar sites and programs offers for free. Another threat is the fact that the video content for the users, will be user generated and for at start, this content will be very limited, until the system have been exposed and users starts to upload tutorials.
 
-\subsection{Strengths}
+\subsection{Strengths} \label{Strengths}
 This system has a lot of strengths associated with it and will have a great chance to greatly impact the target user group. One of the major strengths of the system, is that all tutorials will be gathered in one place. Often when searching for information on how to do stuff, its needed to look in several places and sites, and this is always time consuming and frustrating. For this system, all tutorials for all subjects for technology will be in one place and give the users easy access to many related tutorials. On top of this, if a user chooses to upload a video, that user will get a chance to earn money for every view and download of the tutorial. This will also encourage the users who wish to upload tutorials, to make the tutorial in a good quality and with a great content, since this will increase their chance of getting earning more money, which will benefit the system.\\
 
 In the preceding text, have the system been explained and the major aspects outlined. The system will contain video tutorials regarding technology and every subject under this, which the users can either see with advertisements or buy without advertisements. The tutorials will be uploaded by users and these users will earn money for each time their tutorial is either viewed or bought.
-The system have both strengths and threats, which have been discussed in the above. These will be taken into consideration when developing the final system and the threats.
-(Needs a little bit more wrap up)
+The system have both strengths and threats, which have been discussed in the above. These will be taken into consideration when developing the final system and the threats.\\
+
+In the next section we will consider the requirements listed in section \ref{Requirements} and use these to produce use-cases for the functional requirements for the system. 
 
 \section{Requirements Analysis}
 Generally speaking, requirements can be divided into two categories; functional and non-functional. The functional requirements for the RentIt server are expressed by use-cases, that each encapsulate some functionality the system must posses in order to be a useful solution. The non-functional requirements are captured by the factor-tabel.
@@ -193,7 +194,7 @@ As mentioned, preventing users from using the streamed data obtained by renting 
 
 Since sensitive information is passed by the client to the service, such as login and credit card information, implementing a secure communication channel between two is an important security issue as well. An obvious approach to this would be to use SSL encryption to establish a HTTPS connection, since this can all be handled automatically by the WCF framework and the IIS hosting environment!!REFERENCE TIL LEARNING WCF KAPITEL 7 OG MSDN. However, configuring the server on which  the IIS environment is running requires rights that are not granted to students, so this would have to be done by the course lecturer, in addition to all subsequent changes to the certificate. For this reason, we have decided to delimit to project to not include encryption.
 
-\subsubsection{Finance}
+\subsubsection{Finance} \label{Paypal}
 Users pay for videos using a credit card. This means that the credit card needs to be validated by some external system, in order to ensure that the card is valid. Again we have decided to take advantage of service oriented architecture, by using PayPal as a merchant service provider. PayPal has a sandboxed service endpoint which makes testing easy, without using an actual credit card.
 
 \subsubsection{Persistence}
