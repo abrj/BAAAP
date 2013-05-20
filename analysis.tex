@@ -185,14 +185,19 @@ The HTML5 solution was chosen as the technology for handing video streaming for 
 \subsubsection{Security}
 The business model depends on the system being secure in a number of different regards. Firstly, the system must provide some means of offering authentication and authorization of users, in order to make sure that users will only be granted access to content once they have paid for it, and in the appropriate time frame. In addition, it should not be possible for a user to download a video, unless she has permanently bought it.
 
-WCF in itself provides tools for handling authentication and authorization, based on the ASP.NET authentication framework!!REFERENCE TIL PROGRAMMING WCF KAPITEL 7. 
-Facebook Login vs WCF login\\
-Preventing unauthorized downloading\\
-Encryption\\
+WCF in itself provides tools for handling authentication and authorization, based on the ASP.NET authentication framework!!REFERENCE TIL LEARNING WCF KAPITEL 7. Using that, it would be possible to implement a fairly generic login architecture. However, in the past few years, a different approach to authenticating users have become quite popular; namely using web identity providers. By this approach, users login with an account registered with a well known and widely used foreign service, such as Facebook, Google or Windows Live. This is convenient for users since they then need to remember less usernames and passwords. From an educational perspective, it would also be interesting because it would allow the project group to get hands on experience with service oriented architecture, since these identity providers work by providing a service API. In addition, the default WCF identity mechanisms require credentials to be formatted in a specific manner, and placed in the authorization header of the HTTP message. Using e.g Facebook authentication, involves passing around a unique string, which can be used to access a users' information!!REFERENCE TIL FACEBOOK DOKUMENTATION. This gives us a little more freedom for making simplifications to the login architecture. For those reasons we decided to focus on using identity providers, rather than using the default WCF authentication framework.
+
+
+As mentioned, preventing users from using the streamed data obtained by renting a video to download a video to their own hard-drive is also an important security issue. This is a difficult problem to solve since when a user is streaming the video data in their browser, regardless of which technology is used, they already have access to the data. This is exemplified by the myriad of rippers that exist for other media solutions such as Youtube, Spotify, Soundcloud or Netflix to name a few. For this reason, it seems unlikely that we would solve this problem in this project, since our focus was with managing a project with a geographically dispersed team. As such, although we are aware of the issue, we have deemed it outside of the scope of this project.
+
+Since sensitive information is passed by the client to the service, such as login and credit card information, implementing a secure communication channel between two is an important security issue as well. An obvious approach to this would be to use SSL encryption to establish a HTTPS connection, since this can all be handled automatically by the WCF framework and the IIS hosting environment!!REFERENCE TIL LEARNING WCF KAPITEL 7 OG MSDN. However, configuring the server on which  the IIS environment is running requires rights that are not granted to students, so this would have to be done by the course lecturer, in addition to all subsequent changes to the certificate. For this reason, we have decided to delimit to project to not include encryption.
+
 \subsubsection{Finance}
-PayPal\\
-Ads\\
+Users pay for videos using a credit card. This means that the credit card needs to be validated by some external system, in order to ensure that the card is valid. Again we have decided to take advantage of service oriented architecture, by using PayPal as a merchant service provider. PayPal has a sandboxed service endpoint which makes testing easy, without using an actual credit card.
+
 \subsubsection{Persistence}
-Database tech
+Microsoft SQL Server is installed on the server, which is the most obvious choice for persisting data. However, it might be worth considering using a Object Relational Mapping framework to translate from C\# objects to relational tables, in order to save writing a substantial number of lines of boilerplate code. The ORM framework included in .NET is called Entity framework, which is fairly well integrated with Visual Studio: tools include GUI editing of table mappings, discovering so called EntityObjects through connecting to a database, just to name a few. In addition, the Entity Framework works very well with the .NET LINQ construct, in that its possible to query so called EntitySets with LINQ queries, which is then translated to SQL.
+
+Another possibility is a framework called NHibernate, which offers much of the same functionality, but is not as tightly integrated with Visual Studio. Because of our familiarity with the Entity Framework, we decided to use the Entity Framework, in order to reduce development time on the persistence module of the system.
 
 \section{Project Management Plan}
