@@ -1,2 +1,177 @@
 \section{Test of Requirements and Use-cases}
 
+The Use-cases and which test validates their implementation.
+
+\begin{itemize}
+\item 1)
+John Doe has heard about the RentItClient and wants to learn cool stuff
+\newline Supported by:
+\begin{itemize}
+\item UserManagementTest.AuthenticationTests.TestAuthenticateAndValidate()
+\item UserManagementTest.AuthenticationTests.TestAuthenticateTwice()
+\item PersistenceTest.UserTests.TestCreateAndDeleteUser()
+\item PersistenceTest.UserTests.TestUserExists()
+\item PersistenceTest.TrustedAppTests.TestGetTrustedAppFacebookId()
+\item PersistenceTest.TrustedAppTests.TestValidateUserNotLoggedIn()
+\end{itemize}
+
+\item 2)
+User A wants to login to use the RentItClient and must provide his credentials.
+\newline Supported by:
+\begin{itemize}
+\item UserManagementTest.AuthenticationTests.TestAuthenticateAndValidate()
+\item UserManagementTest.AuthenticationTests.TestAuthenticateTwice()
+\item PersistenceTest.UserTests.TestCreateAndDeleteUser()
+\item PersistenceTest.UserTests.TestUserExists()
+\item PersistenceTest.TrustedAppTests.TestGetTrustedAppFacebookId()
+\item PersistenceTest.TrustedAppTests.TestValidateUserNotLoggedIn()
+\end{itemize}
+
+\item 3)
+User A is done using the RentItClient
+\newline Supported by:
+\begin{itemize}
+\item UserManagementTest.AuthenticationTests.TestLogOut()
+\item UserManagementTest.AuthenticationTests.TestLogOutUserNotLoggedIn()
+\end{itemize}
+
+\item 4)
+User A wants to view the personal information the  RentItClient has on him
+\newline Supported by:
+\begin{itemize}
+\item AAAAAAARRRRGGGHHHH!!!!!
+\end{itemize}
+
+\item 5)
+User C is an administrator, and needs to find and delete a specific user
+\newline Supported by:
+\begin{itemize}
+\item UserManagementTest.AuthenticationTests.TestGetUserRole()
+\item UserManagementTest.AuthenticationTests.TestCreateAndDeleteUser()
+\end{itemize}
+
+\item 6) 
+User A wants to learn something about a special topic and searches for this using the RentItClient. 
+\newline \textit{This feature is not implemented, and therefore not tested}
+
+\item 7)
+User A wants to see a video and downloads this to his computer
+\newline Supported by:
+\begin{itemize}
+\item AAAAAARRRRRGGGGGGHHHHHHH!!!! Download!
+\item FinanceTests.ShoppingManagerTests.TestAddPurchaseToCart()
+\item FinanceTests.ShoppingManagerTests.TestAddPurchaseToCartTwice()
+\item FinanceTests.ShoppingManagerTests.TestRemoveFromCart()
+\item FinanceTests.ShoppingManagerTests.TestRemoveFromCartItemNotInCart()
+\item FinanceTests.ShoppingManagerTests.TestClearCart()
+\item FinanceTests.ShoppingManagerTests.TestCheckOutEmptyCart()
+\item FinanceTests.ShoppingManagerTests.TestCheckOutOneItem()
+\item FinanceTests.ShoppingManagerTests.TestCheckOutTwoItems()
+\item FinanceTests.ShoppingManagerTests.TestCheckOutInsufficientFunds()
+\item FinanceTests.ShoppingManagerTests.TestChangePurchaseToRent()
+\item FinanceTests.ShoppingManagerTests.TestPurchaseToToRent()
+\item FinanceTests.ShoppingManagerTests.TestCheckoutPurchase()
+\end{itemize}
+
+\item 8)
+User A wants to see a tutorial, but does not want to keep this on his computer, so he only rents the video
+\newline Supported by:
+\begin{itemize}
+\item AAAAAARRRRRGGGGGGHHHHHHH!!!! Streaming!
+\item FinanceTests.ShoppingManagerTests.TestAddRentToCart()
+\item FinanceTests.ShoppingManagerTests.TestAddRentToCartTwice()
+\item FinanceTests.ShoppingManagerTests.TestRemoveFromCart()
+\item FinanceTests.ShoppingManagerTests.TestRemoveFromCartItemNotInCart()
+\item FinanceTests.ShoppingManagerTests.TestClearCart()
+\item FinanceTests.ShoppingManagerTests.TestCheckOutEmptyCart()
+\item FinanceTests.ShoppingManagerTests.TestCheckOutOneItem()
+\item FinanceTests.ShoppingManagerTests.TestCheckOutTwoItems()
+\item FinanceTests.ShoppingManagerTests.TestCheckOutInsufficientFunds()
+\item FinanceTests.ShoppingManagerTests.TestChangePurchaseToRent()
+\item FinanceTests.ShoppingManagerTests.TestPurchaseToToRent()
+\item FinanceTests.ShoppingManagerTests.TestCheckoutPurchase()
+\end{itemize}
+
+\item 9)
+User A liked a video tutorial and would like to rate it
+\newline Supported by:
+\begin{itemize}
+\item PersistenceTest.RatingTests.TestSaveAndDeleteRating()
+\end{itemize}
+
+\item 10)
+User B has made a video tutorial and wants to upload this to the server
+\newline \textit{This feature is not implemented, and therefore not tested}
+
+\item 11)
+User A wants to see what videos are new on the site and watch one
+\newline Supported by:
+\begin{itemize}
+\item AAAAAARRRRRGGGGGGHHHHHHH!!!!
+\end{itemize}
+
+\item 12) 
+User A wants to watch a video, and would like advice from the RentItClient on what would suit him
+\newline Supported by:
+\begin{itemize}
+\item PersistenceTest.VideoTests.TestGetAverageRating()
+\end{itemize}
+
+\item 13) 
+User A wants to watch a video that is popular with the rest of the community
+\newline Supported by:
+\begin{itemize}
+\item PersistenceTest.VideoTests.TestGetAverageRating()
+\item PersistenceTest.VideoTests.TestHighestRatedVideos()
+\end{itemize}
+
+\item 14)
+User C is an administrator, and needs to remove a video that does not fit the RentIt policies
+\newline Supported by:
+\begin{itemize}
+\item PersistenceTest.UserTests.TestGetUserRole()
+\end{itemize}
+
+\item 15)
+User A wishes to deposit money to his account
+\newline Supported by:
+\begin{itemize}
+\item FinanceTests.AccountManagerTests.TestSuccesFullDeposit()
+\item FinanceTests.AccountManagerTests.TestFailDeposit()
+\item FinanceTests.AccountManagerTests.TestConvertCurrency()
+\end{itemize}
+
+\item 16)
+User B wishes to withdraw money from his account
+\newline \textit{This feature is not implemented, and therefore not tested}
+
+\item 17)
+User A wants to inspect what he has used money for in the last couple of weeks, to check why his credit balance is low
+\newline Supported by:
+\begin{itemize}
+\item FinanceTests.AccountManagerTests.TestGetTransactionHistory()
+\end{itemize}
+
+\item 18)
+User A wishes to buy and rent some videos
+\newline Supported by:
+\begin{itemize}
+\item FinanceTests.ShoppingManagerTests.TestAddPurchaseToCart()
+\item FinanceTests.ShoppingManagerTests.TestAddPurchaseToCartTwice()
+\item FinanceTests.ShoppingManagerTests.TestAddRentToCart()
+\item FinanceTests.ShoppingManagerTests.TestAddRentToCartTwice()
+\item FinanceTests.ShoppingManagerTests.TestRemoveFromCart()
+\item FinanceTests.ShoppingManagerTests.TestRemoveFromCartItemNotInCart()
+\item FinanceTests.ShoppingManagerTests.TestClearCart()
+\item FinanceTests.ShoppingManagerTests.TestCheckOutEmptyCart()
+\item FinanceTests.ShoppingManagerTests.TestCheckOutOneItem()
+\item FinanceTests.ShoppingManagerTests.TestCheckOutTwoItems()
+\item FinanceTests.ShoppingManagerTests.TestCheckOutInsufficientFunds()
+\item FinanceTests.ShoppingManagerTests.TestChangePurchaseToRent()
+\item FinanceTests.ShoppingManagerTests.TestPurchaseToToRent()
+\item FinanceTests.ShoppingManagerTests.TestCheckoutPurchase()
+\item PersistenceTest.RentalInformationTests.TestGetRentalInformationNoneExists()
+\item PersistenceTest.RentalInformationTests.TestGetNewestRentalInformationReturnsNewest()
+\end{itemize}
+
+\end{itemize}
