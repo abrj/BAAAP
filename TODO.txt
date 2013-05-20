@@ -1,0 +1,23 @@
+- reference til server interface efter SMU 
+
+- Fejl og mangler:
+Test
+søgefunktion
+kryptering
+fejlhåndtering
+
+- Konklusion 
+
+- småting;
+liste og hvem har lavet hvad
+biblografi
+SD's
+lave 4-5 tests
+
+
+
+Imorgen:
+Christian og Sune retter
+jacob laver tests. 
+Anders skriver om tests i fejl/manger og fejlhåndtering. Laver liste over hvem der har lavet hvad
+
