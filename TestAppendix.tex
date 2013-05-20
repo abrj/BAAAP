@@ -40,13 +40,14 @@ User A is done using the RentItClient
 User A wants to view the personal information the  RentItClient has on him
 \newline Supported by:
 \begin{itemize}
-\item AAAAAAARRRRGGGHHHH!!!!!
+\item PersistensTest.UserTests.TestGetUser()
 \end{itemize}
 
 \item 5)
 User C is an administrator, and needs to find and delete a specific user
 \newline Supported by:
 \begin{itemize}
+\item PersistensTest.UserTests.TestGetUser()
 \item UserManagementTest.AuthenticationTests.TestGetUserRole()
 \item UserManagementTest.AuthenticationTests.TestCreateAndDeleteUser()
 \end{itemize}
@@ -59,7 +60,7 @@ User A wants to learn something about a special topic and searches for this usin
 User A wants to see a video and downloads this to his computer
 \newline Supported by:
 \begin{itemize}
-\item AAAAAARRRRRGGGGGGHHHHHHH!!!! Download!
+\item PersistenceTest.VideoTests.GetVideo()
 \item FinanceTests.ShoppingManagerTests.TestAddPurchaseToCart()
 \item FinanceTests.ShoppingManagerTests.TestAddPurchaseToCartTwice()
 \item FinanceTests.ShoppingManagerTests.TestRemoveFromCart()
@@ -78,7 +79,7 @@ User A wants to see a video and downloads this to his computer
 User A wants to see a tutorial, but does not want to keep this on his computer, so he only rents the video
 \newline Supported by:
 \begin{itemize}
-\item AAAAAARRRRRGGGGGGHHHHHHH!!!! Streaming!
+\item PersistenceTest.VideoTests.TestGetVideoPath()
 \item FinanceTests.ShoppingManagerTests.TestAddRentToCart()
 \item FinanceTests.ShoppingManagerTests.TestAddRentToCartTwice()
 \item FinanceTests.ShoppingManagerTests.TestRemoveFromCart()
@@ -102,13 +103,16 @@ User A liked a video tutorial and would like to rate it
 
 \item 10)
 User B has made a video tutorial and wants to upload this to the server
-\newline \textit{This feature is not implemented, and therefore not tested}
+\newline Supported by:
+\begin{itemize}
+\item ServiceTests.UploadTest.Upload
+\end{itemize} 
 
 \item 11)
 User A wants to see what videos are new on the site and watch one
 \newline Supported by:
 \begin{itemize}
-\item AAAAAARRRRRGGGGGGHHHHHHH!!!!
+\item PersistenceTest.VideoTests.TestGetNewestVideos()
 \end{itemize}
 
 \item 12) 
