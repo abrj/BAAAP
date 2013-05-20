@@ -48,28 +48,35 @@ Use cases concerning transactions between account balances and buying more RentI
 \end{itemize}
 In other words, the use cases reveal at least three major areas of responsibility within the required functionality of the system. These responsibilities imply a large scale organization of namespaces, by way of the GRASP principles.
 
-In addition, the use cases provided some intuition about the control flow of some of the major operations of the system. Take for example user case no. 11, which describes paying for a video:\\
+In addition, the use cases provided some intuition about the control flow of some of the major operations of the system. Take for example user case no. 18, which describes paying for a video:\\
 
-\textbf{A user wishes to pay for a video}
+18)
+User A wishes to buy and rent some videos
+\newline Precondition: The user is logged in to the site
+\newline Precondition: The user has an active account with money deposited
+\newline Postcondition: The chosen videos is available to the user
 \begin{itemize}
-	\item Precondition: The user has an active account with sufficient money deposited
-	\item Postcondition: The user has the appropriate amount withdrawn from his 				account
-	\item Postcondition: The user is granted access to the video
-	\begin{enumerate}
-		\item The user finds the video he wants to buy
-		\item The user indicates that he wants to buy the video
-		\item The user is granted access to the video
-	\end{enumerate}
+	\item 1. The user navigates to a video list
+	\item 2. The user finds the videos he wishes to buy
+    \item 3. Presses either the buy or rent buttons, and the videos are added to his Shopping Cart
+    \item 4. Checks out his Shopping Cart
+    \item 5. The user is granted access to the videos
+\newline Alternate flow:
+    \item 3a. The user has changed his mind, and removes some videos from his Shopping Cart. Continued from 4.
+\newline Exceptional flow:
+    \item 4a. The user does not want to buy videos anyway, and clears his Shopping Cart. The use-case termintes.
+\newline Exceptional flow:
+    \item 4b. The user does not have sufficient credits to buy and rent these movies. The use-case terminates.
 \end{itemize}
 
-While short and simple, the pre- and postconditions as well as the steps involved in the use case, reveal a number responsibilities and changes in control flow to be considered. For example, the precondition indicates that each user has a balance associated with her account, to which deposits are made  in a separate use case (no. 9). Furthermore, the following responsibilities need to be delegated to appropriate branches of the system
+While short and simple, the pre- and postconditions as well as the steps involved in the use case, reveal a number responsibilities and changes in control flow to be considered. For example, the precondition indicates that each user has a balance associated with her account, to which deposits are made  in a separate use case (no. 15). Furthermore, the following responsibilities need to be delegated to appropriate branches of the system
 \begin{itemize}
 \item withdrawing money from the users account
 \item granting users access to videos upon successful payment
 \end{itemize}
 This insight can be used as inspiration when designing the large scale organization of namespaces, and the control flow between these packages.
 
-Moreover, the use cases proved an effective way of communicating ideas with the SMU group. By comparing our use cases with their use case model, it was possible to reconcile the two groups expectations to the semantic meaning of the different operations of the system. Take for example use case no. 4, dealing with purchasing videos:\\
+Moreover, the use cases proved an effective way of communicating ideas with the SMU group. By comparing our use cases with their use case model, it was possible to reconcile the two groups expectations to the semantic meaning of the different operations of the system. Take for example an earlier iteration of use case no. 7, dealing with purchasing videos:\\
 
 \textbf{A user wants to see a video and downloads it to his computer}
 \begin{itemize}
