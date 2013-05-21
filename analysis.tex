@@ -101,9 +101,14 @@ All use cases can be found in appendix \ref{UseCases}. Note that use case 16 is 
 \subsection{Factor Table}
 \label{FactorTable}
 As opposed to the functional requirements, the non-functional requirements are not expressed by some functionality the system must offer, but rather some behaviour or quality the system must posses. These are captured by a factor table, as described in \textbf{Larman}. The list of factors the factor table consists of, was devised by using the FURPS+ mnemonic, and brainstorming on predictable requirements based on the business model. This facilitated a fruitful discussion on topics such as security, reliability and performance requirements of the system. The factor table can be found below:
-\begin{center}
-\includegraphics[scale=1.3]{FactorTable.png}
-\end{center}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.0]{FactorTable.png}
+\label{factortable}
+\caption{Showing a factor table}
+\end{figure}
+
 The factors are mainly defined by the business model, in that making changes to the business model, would change the non functional requirements of the system.  For example, the decision to include user generated content greatly impacts factors such as protection of video content in the system, as this in some sense the property of the user who uploaded it.
 
 Some of the usefulness of the factor table is its recording of quality scenarios, because it encouraged the group to reflect on the quantifying the requirement, as to make it testable. Realistically, it would not be possible to satisfactory implement and test all of the factors, but for the sake of exercise, the factor table was composed as if it was meant to be used in  real world situation. As a consequence of the limited timeframe of the project, we decided to limit the factors that we would \textit{actually} emphasize to:
@@ -124,15 +129,24 @@ Something about the domain model
 %\begin{itemize}
 %\item 	
 %\end{itemize}
-\begin{center}
-\includegraphics[scale=0.15]{DomainModel.png}
-\end{center}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.19]{DomainModel.png}
+\label{domainmodel}
+\caption{Showing the domain model for the system}
+\end{figure}
 
 \subsection{ER-Diagram}
 The ER diagram on the following page reflects our considerations on which data should be captured and persisted by the system. The video and user entities constitute the bare minimum of required data to implement the core functionality of video streaming and user management, and the remaining entities capture the data needed to record either deposits and payments, or the data needed to perform statistical analysis for e.g making recommendations to individual users.
-\begin{center}
-\includegraphics[scale=0.15]{ERDiagram.png}
-\end{center}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{ERDiagram2.png}
+\label{ERdiagram}
+\caption{Showing the ER-model for the database}
+\end{figure}
+
 The transaction, rented and bought tables together capture the financial activities of the users, in that transactions capture deposits, or payments by users for videos, and rented and bought capture the respective purchase histories of users. 
 We later realised that this design is a flawed, as it allows for inconsistency between recorded purchases and financial transactions. A better design would have been to record a transaction with each rent- or buy history, and discard recording videos associated with a financial transaction directly in the transaction table.
 
@@ -144,9 +158,13 @@ The shoppingcart entity was added to accommodate a wish from the SMU group of wo
 In this section we will outline our efforts towards translating the functional and non functional requirements into a large scale organization of system namespaces, that is to say the logical architecture of the system. This is modelled using an UML package diagram, which will serve as the basis for the discussion.
 \subsection{Package Diagram}
 The package diagram below reflects the responsibilities identified by developing the use cases, and in part the non-functional requirements of the factor table. For example, the need for restricting access to videos dictates the existence of of modules handling authentication and authorization, which in the model is delegated to the UserManagement package. The level of abstraction used in the diagram is very high, and is intended as inspiration for classes and namespaces, for improving understanding of the system, but not as an exact specification.
-\begin{center}
-\includegraphics[scale=0.15]{PackageDiagram.png}
-\end{center}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.2]{PackageDiagram.png}
+\label{packagediagram}
+\caption{Showing the package diagram}
+\end{figure}
 The WCF package assumes responsibility of exposing the service interface to clients, including which ever configuration is necessary for achieving this. Responsibility of adding items to, removing items from, emptying and checking out the shopping cart is delegated to the Finance package, in addition to making deposits to the users' RentIt credit balances.
 The VideoManagement package is responsible for creating streams for the appropiate video files upon request, as well as generating links that can be used to download videos, in addition to limiting access to these links as to make them available only to paying customers. Finally, the Persistence package is responsible for saving data and coordinating requests to the underlying persistence technology.
 
