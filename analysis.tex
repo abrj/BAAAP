@@ -131,10 +131,12 @@ This modelling was done using  an ER-diagram as an aid for reflecting on a usefu
 
 \subsection{ER-Diagram}
 The ER diagram on the following page reflects our considerations on designing a useful relational database. The video and user entities constitute the bare minimum of required data to implement the core functionality of video streaming and user management, and the remaining entities capture the data needed to record either deposits and payments, or the data needed to perform statistical analysis for e.g making recommendations to individual users.
-\begin{center}
-\includegraphics[scale=0.15]{ERDiagram.png}
-\end{center}
-
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.2]{ERDiagram.png}
+\label{ERdiagram}
+\caption{Showing the ER-model for the database}
+\end{figure}
 The "transaction", "rented", and "bought" tables combined, capture the financial activities of the users, in that transactions capture deposits, or payments by users for videos, and the "rented" and "bought" tables capture the respective purchase histories of users.
 We later realised that this design is flawed, as it allows for inconsistency between recorded purchases and financial transactions. A better design would have been to record a transaction with each rent or buy history, and discard recording videos associated with a financial transaction directly in the transaction table.
 
@@ -147,9 +149,13 @@ In this section we will outline our efforts towards translating the functional a
 
 \subsection{Package Diagram}
 The package diagram below reflects the responsibilities identified by developing the use cases, and in part the non-functional requirements of the factor table. For example, the need for restricting access to videos dictates the existence of modules handling authentication and authorization, which in the model is delegated to the UserManagement package. The level of abstraction used in the diagram is very high, and is intended as inspiration for classes and namespaces and for improving the understanding of the system, but not as an exact specification.
-\begin{center}
-\includegraphics[scale=0.15]{PackageDiagram.png}
-\end{center}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.1]{PackageDiagram.png}
+\label{packagediagram}
+\caption{Showing the package diagram}
+\end{figure}
 
 The WCF package assumes the responsibility of exposing the service interface to clients, including which ever configuration is necessary for achieving this. Responsibility of adding items to, removing items from, emptying, and checking out the shopping cart is delegated to the Finance package, in addition to making deposits to the users' RentIt credit balances.
 The VideoManagement package is responsible for creating streams for the appropiate video files upon request, as well as generating links that can be used to download videos, in addition to limiting access to these links, as to make them available only to paying customers. Finally, the Persistence package is responsible for saving data and coordinating requests to the underlying persistence technology.
