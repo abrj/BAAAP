@@ -1,78 +1,88 @@
 \part{Introduction}
 \section{Foreword}
-There has been a great deal of development within the world of tutorials ever since the original idea of a tutor was first established at Oxford University in the 15th century. Back then, the scholars became responsible for the proper education of their fellow colleagues. Today, the expansive growth within the technological area, with the Internet as one of its central parts, has ensured a rapid development of online tutorials, making it possible for the average person to attain knowledge and knowhow of virtually every imaginable subject, ranging from gardening to the creation of your own rocket.
-All that is needed is an internet connection along with a sense of curiosity and a willingness to learn.\\
+There has been a great deal of development within the world of tutorials ever since the original idea of a tutor was first established at Oxford University in the 15th century. Back then, the scholars became responsible for the proper education of their fellow colleagues. Today, the expansive growth within the technological area, with the Internet as one of its central parts, has ensured a rapid development of on-line tutorials, making it possible for the average person to attain knowledge and know-how of virtually every imaginable subject, ranging from gardening to the creation of your own rocket. All that is needed is an internet connection along with a sense of curiosity and a willingness to learn. 
+
+It is this quality of the Internet that we intend to take advantage of with this  project, which is part of the course Second Year Project With International Collaboration taught at the IT University of Copenhagen . The purpose of this project is to gain insight into the challenges of working with a geographically dispersed development team, under a number of constraints given by a formal project description, which we will present in the next section.
 
 %Skal vi ikke udlade det her?
 %Our site offers tutorials which is specifically centered around the area of technology and our longterm goal is to make it as close to self-sustainable as possible, by focusing on user generated content. One incentive for this is that uploaders will get paid for other users watching their videos, thus making sure that the tutorials are of as high quality as possible in order to get higher ratings and more users.%
 
 \section{Project Description}
-For this project we have been giving a project description containing both a formal written description of the project and a list of goals and requirements. From this we know that we have to produce a system with a server which can store and make different types of media files accessible for users, publishing the operations using a WCF interface.\\
-The description also states that its necessary to develop a client application, which can be used to access the media files on the server, administrate these files and view and/or download the files. The technology used for this application is optional.\\ 
-Besides the things stated in the above, a central part of the project is an international collaboration. This 	is with a group of 3 people from a Singaporean university, which we will refer to as the SMU-group. We will further explain their background and role for this project in section \ref{InternationCollaboration}. \\
+The project description is a document that contains a formal list of both goals and requirements which is a mandatory part of the course. It describes a system with a server which can store different types of media files and make them accessible for users, publishing the operations using a WCF interface.\\
+In addition, developing a client application, which can be used to access the service, is a formal requirement.
 
-This concludes the description of the project and we will continue with a overview of the requirements.  
+Besides the requirements stated in the above, a central part of the project is an international collaboration. This is done with a group consisting of three students from Singapore Management University , which we will refer to as the SMU-group. We will further explain their background and role for this project in section \ref{InternationCollaboration}. \\
+
+This concludes the description of the project and we will continue with a overview of the requirements.
+
+\section{Vision}
+In the following a system will be proposed, where it is possible for a user to rent, purchase, and upload different kind of media files. These media files will be in the form of tutorials and the authors of the files will be paid through the system when other users purchases or rents the media file. The service provides an overview of available media files for the users, which have been tagged by the authors. This gives the users the option to search for different files in categories and also rate the media files.\\
+
+A user can either rent or purchase a tutorial. If the user rents a tutorial it will only be available for a given time period. If the user chooses to purchase a tutorial it will be available to the user for good. \\ 
+In other words, our vision is to make a service which will include some educational technology related tutorials and  where the author of a good and thorough tutorial will be awarded financially for his work.
 
 \subsection{Requirements} \label{Requirements}
-The requirements from the project description can be outlined as list of requirements, divided in project Must-Have requirements and Nice-To-Have requirements:
+The requirements from the project description can be outlined as list divided into project core requirements and additional features:
 
 \subsubsection{Server}
 
-\textbf{Must-Have Requirements}
+\textbf{Core Requirements}
 \begin{itemize}
-	\item Must support one or more WCF services, written in c-sharp
+	\item Must support one or more WCF services, written in C\#
 	\item Must be deployed on an IIS 7 Server
 	\item Must use a Microsoft SQL database
-	\item The system will run in multi user environments
-	\item Users can register or create a new account, read (or display), update and delete (CRUD) account information. 			Negotiate the account information.
+	\item The system will run in multi-user environments
+	\item Users can register to create a new account, 
+	\item Users can create, read, update and delete (CRUD) account information.
 	\item Users must be able to login.
-	\item Admin can add or create new product, read (or display), update and delete (CRUD) product information. 				Negotiate the product information. The display of the product should provide information such as the thumbnail 			image, category (for search), and analytic information (recent searches). It should support at least 2 media type 			(mpeg and avi).
-	\item Users can search for the product. Negotiate what information is needed for the search.
-	\item Users can rent and download product (without payment).
-	\item You can assume that there is already a player/viewer for the downloaded medias. Eg. Windows media player or 			VLC.
-	\item Most of the data should be stored in the server side.
+	\item Administrators can add or create new products
+	\item Administrators can read, update and delete (CRUD). 		 
+	\item The display of the product should provide information such as the thumbnail image, category, and 						analytical information (recent searches). 
+	\item The system should support at least 2 media type.
+	
+	\item Users can search for a specific product.
+	\item Users can rent and download products.
+	\item The group can assume that there is already a player/viewer for the downloaded media.
+	\item Most of the data should be stored on the server side.
 \end{itemize}
 \textbf{Nice-To-Have Requirements}
 \begin{itemize}
 	\item Based on a users previous rented or bought video files the server must be able to show recommendations
 	\item Must give users the option to rate a tutorial
-	\item Must support handling of both upload, rent, and download of files
-	\item Must be able to process and distribute payments between users and authors
-	\item Must support both admin and normal user login, which gives different privileges
+	\item Must be able to process and distribute payments between users and authors of the products
+	\item Must support both administrator and normal user login, which gives different privileges
 \end{itemize}
 
 \subsubsection{Client}
-textbf{Must-Have Requirements}
+\textbf{Core Requirements}
 \begin{itemize}
-	\item The UI for each of the features listed above. The usability is important. For example,
+	\item The UI for each of the features listed above. 
+	\item The usability is important. For example:
+	\begin{itemize}
+		\item The login should hide the password.
+		\item Homogeneous look and feel for all UI view
+		\item Online help, tutorials, tooltips, etc.
+	\end{itemize}
 	\item The login should not repeat the password.
 	\item CSS or template look and feel for each pages.
 	\item Online help, tutorials, tooltips, etc.
 \end{itemize}
-\textbf{Nice-To-Have Requirements}
+\textbf{Additional Features}
 \begin{itemize}
-	\item A user must be able to log in using his facebook credentials
+	\item A user must be able to log in using his Facebook credentials
 	\item A user must be able to browse media files, sorted by rating
-	\item A user must be able to browse media file, which is recommended for him
+	\item The system must be able to make recommendations for users 
 	\item A user must be able to rate a media file
-	\item A user most be able to add a media file to his shopping cart either as a purchase or as a rental
-	\item A user must be able to see a list of his transactions
-	\item A user must be able to deposit money to his account
-	\item A user must be able to checkout his shopping cart and be granted authorization to the bought media
-	\item A user must be able to download a media file, which he have purchased. 
+	\item The system must provide shopping cart functionality
+	\item A user must be able to see a history of his financial activity
+	\item A user must be able to checkout his shopping cart and be granted access to the purchased media
+	\item A user must be able to download a media file, which he has purchased. 
 	\item A user must be able to upload media files to the system
-	\item A user, which admin privileges, must be able to manage users and media files 
+	\item A user, with administrator privileges, must be able to manage users and media files 
 \end{itemize}
 
-
-\section{Vision}
-In the following a system will be proposed, where it is possible for a user to rent, purchase and upload different kind of media files. These media files will be in the form of tutorials and the author of the file(s), will be paid through the system when the users purchases or rents the media file. The program will include a registry of available media files for the user, which have been tagged by the author. This gives the users the option to search for different files in categories and also rate the media files.\\
-
-A user can either rent or purchase a tutorial. If the user rents a tutorial it will only be available for a given time period and include some form of advertisement. If the user chooses to purchase a tutorial it will be available to the user for good. \\ 
-In other words our vision is to make a service which will include some educational technology related tutorials and  where the author of a good and thorough tutorial will be awarded financial for the work.
-
 \section{International Collaboration} \label{InternationCollaboration}
-A big part of the project is to collaborate with a school group from Singapore Management University. This SMU-group is at a similar educational level as ourselves, but with a different technical background than us. The purpose of this collaboration is to give us experience similar to real-world situations, where it is common to collaborate with people across borders.\\
+A big part of the project is to collaborate with a group from Singapore Management University. This SMU group is at a similar educational level as ourselves, but with a different technical background than us. The purpose of this collaboration is to give us experience similar to real-world situations, where it is common to collaborate with people across borders.\\
 The two groups will have to agree on a specification for the server and decide what operations the server should have and what data types the client and server should exchange.
-The Singaporeans will have to develop a client, which uses the server accordingly to the specification the groups have agreed on. The collaboration should be documented using a joint Wiki page, which all team members will have access to. A reflection of this collaboration has also to be included in this report, which will be done in section \ref{SmuCollaboration}.
+The SMU group will have to develop a client, which uses the server according to the specification the groups have agreed upon. The collaboration should be documented using a joint Wiki page, which all team members will have access to. A reflection of this collaboration will also be included in this report. Please refer to part \ref{SmuCollaboration} for further elaboration.
 
