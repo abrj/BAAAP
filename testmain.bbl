@@ -1,11 +1,76 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{AFB}
+Adobe~Features Blog.
+\newblock Flash to focus on pc browsing and mobile apps; adobe to more
+  aggressively contribute to html5.
+\newblock \url{http://blogs.adobe.com/conversations/2011/11/flash-focus.html},
+  2011.
+
+\bibitem{MLB}
+Michele~Leroux Bustamante.
+\newblock {\em Learning WCF; A Hands-on Guide, First Edition}.
+\newblock O'reilly, 2007.
+
+\bibitem{CH}
+Hinds Cramton.
+\newblock Subgroup dynamics in internationally distributed teams: Ethnocentrism
+  or cross-national learning?
+\newblock 2005.
+
+\bibitem{FB}
+Facebook.
+\newblock The login flow for web.
+\newblock
+  \url{http://developers.facebook.com/docs/facebook-login/login-flow-for-web/},
+  2013.
+
+\bibitem{NH}
+Niels Hallenberg.
+\newblock Slides from lecture on international collaboration, 2013.
+
+\bibitem{CSHARP}
+Matthew~Adams Ian~Griffiths and Jesse Liberty.
+\newblock {\em Programming C\# 4.0, Sixth Edition}.
+\newblock O'reilly, 2010.
+
+\bibitem{JGO}
+Gary~Olson Judith~Olson.
+\newblock Subgroup dynamics in internationally distributed teams: Ethnocentrism
+  or cross-national learning?
+\newblock 2004.
+
+\bibitem{OOAD}
+Craig Larman.
+\newblock {\em Applying UML and Patterns: An Introduction to Object-Oriented
+  Analysis and Design and Iterative Development, 3rd edition}.
+\newblock Addison-Wesley, Reading, Massachusetts, 2004.
+
+\bibitem{LL}
+Lawrence Lessig.
+\newblock Laws that choke creativity.
+\newblock
+  \url{http://www.ted.com/talks/larry_lessig_says_the_law_is_strangling_creativity.html},
+  2007.
+
+\bibitem{MSDN}
+MSDN.
+\newblock How to: Configure an iis-hosted wcf service with ssl.
+\newblock \url{http://msdn.microsoft.com/en-us/library/hh556232.aspx}, 2013.
+
+\bibitem{PP}
+PayPal.
+\newblock Rest api reference.
+\newblock \url{https://developer.paypal.com/webapps/developer/docs/api/}, 2013.
 
 \bibitem{RS}
 Wikipedia.
-\newblock Recommender system, 2013.
+\newblock Recommender system.
+\newblock \url{http://en.wikipedis.org/wiki/Recommender_system}, 2013.
 
-\bibitem{RS}
+\bibitem{SOAP}
 Wikipedia.
-\newblock Recommender system, 2013.
+\newblock Soap.
+\newblock \url{http://en.wikipedis.org/wiki/Soap#Disadvantagdes}, 2013.
 
 \end{thebibliography}

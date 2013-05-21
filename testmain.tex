@@ -4,6 +4,9 @@
 \usepackage{float}
 \usepackage{hyperref}
 \usepackage{cite}
+\usepackage{url}
+\usepackage{pdfpages}
+
 \author{sdeb@itu.dk}
 \title{testMain}
 \newcommand{\source}[1]{%
@@ -25,6 +28,8 @@
 \include{TestAppendix}
 \include{DistributionOfWorkAppendix}
 \include{SMUServiceInterface}
+\includepdf[pages={-}]{combinedWIKI.pdf}
+\includepdf[pages={-}]{reviewOfgroup9.pdf}
 \bibliographystyle{plain}
 \bibliography{bibliografi}
 \end{document}
