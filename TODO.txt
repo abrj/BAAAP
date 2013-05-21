@@ -1,11 +1,4 @@
-- reference til server interface
-
-- Fejl og mangler:
-Test
-søgefunktion
-kryptering
-fejlhåndtering
-recommended videos 
+﻿- reference til server interface
 
 - Konklusion 
 - Client (beskrivelse af hvilken adresse man skal bruge for at starte clienten)
@@ -14,13 +7,13 @@ recommended videos
 - småting;
 liste og hvem har lavet hvad
 biblografi
-SD's
 referencer til alt ting 
 
 
 
 Imorgen:
 Christian og Sune retter
-jacob laver tests, Recommended Videos, søgefunktion
-Anders skriver om tests i fejl/manger og fejlhåndtering. Laver liste over hvem der har lavet hvad
+Jakob - test search, Bibliografi og referencer
+Anders - Hvem har lavet hvad
+Sune - Bibliografi og referencer
 
