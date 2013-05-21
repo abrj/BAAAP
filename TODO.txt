@@ -9,6 +9,7 @@ recommended videos
 
 - Konklusion 
 - Client (beskrivelse af hvilken adresse man skal bruge for at starte clienten)
+- Summary sections
 
 - småting;
 liste og hvem har lavet hvad
