@@ -1,23 +1,26 @@
-- reference til server interface efter SMU 
+- reference til server interface
 
 - Fejl og mangler:
 Test
 søgefunktion
 kryptering
 fejlhåndtering
+recommended videos 
 
 - Konklusion 
+- Client (beskrivelse af hvilken adresse man skal bruge for at starte clienten)
+- Summary sections
 
 - småting;
 liste og hvem har lavet hvad
 biblografi
 SD's
-lave 4-5 tests
+referencer til alt ting 
 
 
 
 Imorgen:
 Christian og Sune retter
-jacob laver tests. 
+jacob laver tests, Recommended Videos, søgefunktion
 Anders skriver om tests i fejl/manger og fejlhåndtering. Laver liste over hvem der har lavet hvad
 

@@ -1,5 +1,5 @@
 \part{Appendix}
-\section{Use Cases}
+\section{Use Cases} \label{UseCases}
 \begin{itemize}
 
 \item 1)
@@ -21,184 +21,217 @@ John Doe has heard about the RentItClient and wants to learn cool stuff
 User A wants to login to use the RentItClient and must provide his credentials.
 \newline Precondition: Has working internet connection
 \newline Postcondition: Is logged in to the site
-    1. Opens the browser and enters the URL to the website
-    2. Is presented with the homepage and navigates to the ‘Login with Facebook’ button
-    3. Enters his credentials
+\begin{itemize}
+    \item 1. Opens the browser and enters the URL to the website
+    \item 2. Is presented with the homepage and navigates to the ‘Login with Facebook’ button
+    \item 3. Enters his credentials
 \newline Alternative flow:
-    3a. The credentials could not be validated. The user is requested to retry.
+    \item 3a. The credentials could not be validated. The user is requested to retry.
+\end{itemize}
 
 \item 3)
 User A is done using the RentItClient
 \newline Precondition: Is logged into the site
 \newline Postcondition: Is not logged into the site
-1. Navigates to the ‘Log out’ button
+\begin{itemize}
+	\item 1. Navigates to the ‘Log out’ button
+\end{itemize}
 
 \item 4)
 User A wants to view the personal information the RentItClient has on him
 \newline Precondition: Is logged in to the site
-    1. Navigates to the ‘My page’ button
-    2. Looks through the information he is interested in.
+\begin{itemize}
+    \item 1. Navigates to the ‘My page’ button
+    \item 2. Looks through the information he is interested in.
+\end{itemize}
 
 \item 5)
 User C is an administrator, and needs to find and delete a specific user
 \newline Precondition: Is logged in to the site
 \newline Precondition: Is an administrator in the system
 \newline Postcondition: Is deleted user no longer exists in the system
-    1. Navigates to the ‘Users’ list.
-    2. Looks through the list of users
-    3. Finds the user he is looking for, and clicks the ‘Delete User’ button
+\begin{itemize}
+    \item 1. Navigates to the ‘Users’ list.
+    \item 2. Looks through the list of users
+    \item 3. Finds the user he is looking for, and clicks the ‘Delete User’ button
 \newline Exceptional flow:
-    1a. The user could not be verified as an administrator. The use-case terminates.
+    \item 1a. The user could not be verified as an administrator. The use-case terminates.
+\end{itemize}
 
-\item 6) (NOT SUPPORTED)
+\item 6)
 User A wants to learn something about a special topic and searches for this using the RentItClient. 
 \newline Precondition: Is logged into the site.
 \newline Postcondition: Is able to view the video
-    1. Navigates to the ‘search’ field. 
-    2. Types in a keyword he wants to search for.
-    3. Scrolls the list of presented videos and selects the one he finds interesting. 
-    4. Can either choose to rent or buy the video.
-    5. Watches the video.
+\begin{itemize}
+    \item 1. Navigates to the ‘search’ field. 
+    \item 2. Types in a keyword he wants to search for.
+    \item 3. Scrolls the list of presented videos and selects the one he finds interesting. 
+    \item 4. Can either choose to rent or buy the video.
+    \item 5. Watches the video.
+\end{itemize}
 
 \item 7)
 User A wants to see a video and downloads this to his computer
 \newline Precondition: Is logged in to the site
 \newline Precondition: Has an active account with a high enough credit balance
 \newline Postcondition: The video is downloaded to the computer
-    1. Navigates to a video list
-    3. Finds the video he wants to watch
-    4. Can either choose to rent or buy the video, and chooses to buy
-    5. The video is added to the ‘Purchase’ part of the users Shopping Cart.
-    6. Checks out his Shopping Cart
-    7. Clicks the ‘Download’ button for the video he has bought
-    8. Chooses where the file should be saved
-    9. Is given a download link and the download starts
+\begin{itemize}
+    \item 1. Navigates to a video list
+    \item 3. Finds the video he wants to watch
+    \item 4. Can either choose to rent or buy the video, and chooses to buy
+    \item 5. The video is added to the ‘Purchase’ part of the users Shopping Cart.
+    \item 6. Checks out his Shopping Cart
+    \item 7. Clicks the ‘Download’ button for the video he has bought
+    \item 8. Chooses where the file should be saved
+    \item 9. Is given a download link and the download starts
 \newline Alternative flow:
-    9a. The user wants to download the video at a later time.
-    10a. He navigates to the video at a later time, and downloads it.
+    \item 9a. The user wants to download the video at a later time.
+    \item 10a. He navigates to the video at a later time, and downloads it.
 \newline Exceptional flow:
-    6a. The user does not have enough credits tied to his account. The use-case terminates 
+    \item 6a. The user does not have enough credits tied to his account. The use-case terminates 
+\end{itemize}
 
 \item 8)
 User A wants to see a tutorial, but does not want to keep this on his computer, so he only rents the video
 \newline Precondition: Is logged in and authenticated by the server
 \newline Postcondition: Has viewed the video
-    1. Navigates to a video list
-    3. Finds the video he wants to watch
-    4. Can either choose to rent or buy the video, and chooses to rent
-    5. The video is added to the ‘Rental’ part of the users Shopping Cart.
-    6. Checks out his Shopping Cart
-    7. Clicks the ‘Stream’ button for the video he has rented
-    9. The video is displayed. 
+\begin{itemize}
+    \item 1. Navigates to a video list
+    \item 3. Finds the video he wants to watch
+    \item 4. Can either choose to rent or buy the video, and chooses to rent
+    \item 5. The video is added to the ‘Rental’ part of the users Shopping Cart.
+    \item 6. Checks out his Shopping Cart
+    \item 7. Clicks the ‘Stream’ button for the video he has rented
+    \item 8. The video is displayed. 
 \newline Alternative flow:
-    9a. The user wants to watch the video at a later time.
-    10a. He navigates to the video at a later time, within the rental period, and streams it
+    \item 8a. The user wants to watch the video at a later time.
+    \item 9a. He navigates to the video at a later time, within the rental period, and streams it
 \newline Exceptional flow:
-    6a. The user does not have enough credits tied to his account. The use-case terminates 
+    \item 6a. The user does not have enough credits tied to his account. The use-case terminates 
+\end{itemize}
 
 \item 9)
 User A liked a video tutorial and would like to rate it
 \newline Precondition: Is logged in to the site
 \newline Precondition: Has seen a video tutorial
 \newline Postcondition: Has rated the video tutorial
-1. Sees video tutorial
-    2. Wants to give the tutorial 4 in rating
-    3. Types in 4 in a rating field and presses the rate button
+\begin{itemize}
+	\item 1. Sees video tutorial
+    \item 2. Wants to give the tutorial 4 in rating
+    \item 3. Types in 4 in a rating field and presses the rate button
+\end{itemize}
 
-\item 10) (NOT SUPPORTED)
+\item 10)
 User B has made a video tutorial and wants to upload this to the server
 \newline Precondition: Is logged into the site
 \newline Postcondition: Has uploaded a video
-    1. Navigates to the upload button and presses this.
-    2. Is presented with a form, where its possible to browse through local files.
-    3. Finds and selects the video to upload.
-    4. Finds and selects a thumbnail for the video.
-    4. User A fills out a form with information about the video.
-    5. Uploads the video by pressing the ‘OK’ button. 
+\begin{itemize}
+    \item 1. Navigates to the upload button and presses this.
+    \item 2. Is presented with a form, where its possible to browse through local files.
+    \item 3. Finds and selects the video to upload.
+    \item 4. Finds and selects a thumbnail for the video.
+    \item 4. User A fills out a form with information about the video.
+    \item 5. Uploads the video by pressing the ‘OK’ button. 
 \newline Exceptional flow:
-    5a. The upload was not successful. The system returns error. The use-case terminates
+    \item 5a. The upload was not successful. The system returns error. The use-case terminates
+\end{itemize}
 
 \item 11)
 User A wants to see what videos are new on the site and watch one
 \newline Precondition: Is logged in to the site
 \newline Postcondition: Has watched a video
-    1. Navigate to the ‘Newest videos’ list
-    2. Scrolls through and finds a video he likes
-    3. Pays for the video and watches it.
+\begin{itemize}
+    \item 1. Navigate to the ‘Newest videos’ list
+    \item 2. Scrolls through and finds a video he likes
+    \item 3. Pays for the video and watches it.
+\end{itemize}
 
 \item 12) 
 User A wants to watch a video, and would like advice from the RentItClient on what would suit him
 \newline Precondition: Is logged in to the site
 \newline Postcondition: Has watched a video
-    1. Navigate to the ‘Recommended videos’ list
-    2. Scrolls through and finds a video he likes
-    3. Pays for the video and watches it.
+\begin{itemize}
+    \item 1. Navigate to the ‘Recommended videos’ list
+    \item 2. Scrolls through and finds a video he likes
+    \item 3. Pays for the video and watches it.
+\end{itemize}
 
 \item 13) 
 User A wants to watch a video that is popular with the rest of the community
 \newline Precondition: Is logged in to the site
 \newline Postcondition: Has watched a video
-    1. Navigate to the ‘Highest rated videos’ list
-    2. Scrolls through and finds a video he likes
-    3. Pays for the video and watches it.
+\begin{itemize}
+    \item 1. Navigate to the ‘Highest rated videos’ list
+    \item 2. Scrolls through and finds a video he likes
+    \item 3. Pays for the video and watches it.
+\end{itemize}
 
 \item 14)
 User C is an administrator, and needs to remove a video that does not fit the RentIt policies
 \newline Precondition: Is logged in to the site
 \newline Precondition: Is an administrator in the system
 \newline Postcondition: The deleted video does no longer exist in the system
-    1. Navigate to the ‘Videos’ list
-    2. Looks through the list and finds the video he is looking for
-    3. Clicks the ‘Delete’ button adjacent to the video
+\begin{itemize}
+    \item 1. Navigate to the ‘Videos’ list
+    \item 2. Looks through the list and finds the video he is looking for
+    \item 3. Clicks the ‘Delete’ button adjacent to the video
 \newline Exceptional flow:
-    1a. The user could not be verified as an administrator. The use-case terminates.
+    \item 1a. The user could not be verified as an administrator. The use-case terminates.
+\end{itemize}
 
 \item 15)
 User A wishes to deposit money to his account
 \newline Precondition: The user is logged in to the site
 \newline Postcondition: The user has deposited money to his account
-    1. Navigate to the ‘Deposit credits’ page
-    2. Inputs the amount of credits he wants to transfer and what currency he will be using
-    3. Is presented with how much currency it will cost for the specified amount of credits
-    4. The user inserts credit card information
-    5. Agrees to insert the amount.
+\begin{itemize}
+    \item 1. Navigate to the ‘Deposit credits’ page
+    \item 2. Inputs the amount of credits he wants to transfer and what currency he will be using
+    \item 3. Is presented with how much currency it will cost for the specified amount of credits
+    \item 4. The user inserts credit card information
+    \item 5. Agrees to insert the amount.
 \newline Alternate flow:
-    5a. The credit card information could not verified. The systems requests the user to retry.
+    \item 5a. The credit card information could not verified. The systems requests the user to retry.
+\end{itemize}
 
 \item 16)(NOT SUPPORTED!)
 User B wishes to withdraw money from his account
 \newline Precondition: The user is logged in to the site
 \newline Precondition: The user has an active account with money inserted into it
 \newline Postcondition: The user has withdrawn the chosen amount from his account
-    1. The user navigates to the ‘Account’ site
-    2. The user views how many credits is tied to his account
-    3. Inputs the amount of credits to withdraw, lower or equal to what is in his account
-    4. The chosen amount is withdrawn from the users account
+\begin{itemize}
+    \item 1. The user navigates to the ‘Account’ site
+    \item 2. The user views how many credits is tied to his account
+    \item 3. Inputs the amount of credits to withdraw, lower or equal to what is in his account
+    \item 4. The chosen amount is withdrawn from the users account
+\end{itemize}
 
 \item 17)
 User A wants to inspect what he has used money for in the last couple of weeks, to check why his credit balance is low
 \newline Precondition: The user is logged in to the site
 \newline Precondition. The user has made some transaction
-    1. The user navigates to the ‘Account’ page
-    2. Is presented with a list of transactions
-    3. Looks through the list, checking the movements of his credit balance.
+\begin{itemize}
+    \item 1. The user navigates to the ‘Account’ page
+    \item 2. Is presented with a list of transactions
+    \item 3. Looks through the list, checking the movements of his credit balance.
+\end{itemize}
 
 \item 18)
 User A wishes to buy and rent some videos
 \newline Precondition: The user is logged in to the site
 \newline Precondition: The user has an active account with money deposited
 \newline Postcondition: The chosen videos is available to the user
-    1. The user navigates to a video list
-	2. The user finds the videos he wishes to buy
-    3. Presses either the buy or rent buttons, and the videos are added to his Shopping Cart
-    4. Checks out his Shopping Cart
-    5. The user is granted access to the videos
+\begin{itemize}
+    \item 1. The user navigates to a video list
+	\item 2. The user finds the videos he wishes to buy
+    \item 3. Presses either the buy or rent buttons, and the videos are added to his Shopping Cart
+    \item 4. Checks out his Shopping Cart
+    \item 5. The user is granted access to the videos
 \newline Alternate flow:
-    3a. The user has changed his mind, and removes some videos from his Shopping Cart. Continued from 4.
+    \item 3a. The user has changed his mind, and removes some videos from his Shopping Cart. Continued from 4.
 \newline Exceptional flow:
-    4a. The user does not want to buy videos anyway, and clears his Shopping Cart. The use-case termintes.
+    \item 4a. The user does not want to buy videos anyway, and clears his Shopping Cart. The use-case termintes.
 \newline Exceptional flow:
-    4b. The user does not have sufficient credits to buy and rent these movies. The use-case terminates.
-
+    \item 4b. The user does not have sufficient credits to buy and rent these movies. The use-case terminates.
+\end{itemize}
 
 \end{itemize}
