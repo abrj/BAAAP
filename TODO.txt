@@ -8,13 +8,13 @@ fejlhåndtering
 recommended videos 
 
 - Konklusion 
-- Client
+- Client (beskrivelse af hvilken adresse man skal bruge for at starte clienten)
 
 - småting;
 liste og hvem har lavet hvad
 biblografi
 SD's
-referencer til alt ting
+referencer til alt ting 
 
 
 
