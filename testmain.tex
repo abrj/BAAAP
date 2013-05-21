@@ -1,6 +1,9 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{cite}
 \author{sdeb@itu.dk}
 \title{testMain}
 \newcommand{\source}[1]{%
@@ -12,6 +15,16 @@
 \include{Introduction}
 \include{analysis}
 \include{design}
+\include{TestingStrategy}
 \include{SmuCollaboration}
 \include{client}
+\include{FinalThoughts}
+
+\appendix
+\include{UseCases}
+\include{TestAppendix}
+\include{DistributionOfWorkAppendix}
+\include{SMUServiceInterface}
+\bibliographystyle{plain}
+\bibliography{bibliografi}
 \end{document}
