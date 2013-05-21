@@ -1,3 +1,7 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{MF}
+Martin Fowler.
+\newblock Continuous integration, 2006.
 
 \end{thebibliography}
