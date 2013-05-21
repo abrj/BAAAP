@@ -20,11 +20,18 @@ With every software system there is always a chance of errors and failure. This 
 In section \ref{TestingStrategy} we describe the thoughts about the importance of testing and how this should be done in this project. We have to some extend lived up to this and tested on the basis of our use-cases. This would ensure that the functionality the use-cases requires is working and tested. On the other side, we do however believe that since this is a system, without any complicated and complex datastructures or algorithms, we do not see it necessary to unit test every piece of code written. We have tested the system in a black-box kind of way, combined with relevant unit tests. We have made unit tests and made them perform an operation of the service and then looked in the database and file system, to see if the tables and files were updated and expected. We are aware of the pitfalls of doing this, instead of proper unit tests, but because of the relative simple and non-complex system, we feel that the method explained is enough to being able to say that the system performs as intended.
 
 \textbf{Recommended Videos}
+A system with the main function of providing large amounts of user-generated content, has to present different and easy access to this content. One of the ways we had thought of, was to implement some kind module for the RentIt service, that would provide the user with a list of videos that would fit the users preferences in some way. This feature is also present in our use-cases \ref{UseCases} and WFC interface!!REF!!, but was never implemented.
+
+Our thoughts on the problem of a so called 'Recommender system', ranged from recommending videos based on statistics of what other users with the same age, gender, local etc. had watched or rated highly, known as a 'collaborate filtering' approach, or to recommend 'similar' videos to the ones you had already bought or rented, typically referred to as a 'content based' approach. Also, as we have incorporated Facebook integration into our user-profiling, we would be able to even further build on the 'collaborate filtering' by taking in to account what your Facebook-friends appreciates. \
+
+The Wikipeadia article on 'Recommender systems'!!!!REF http://en.wikipedia.org/wiki/Recommender_system!!!! given a good inside on the topic, and in addition many articles can be found on the topic of de-constructing the algorithms of services such as Amazon, Youtube, Netflix etc. \
 
 \textbf{Search functionality}
+SHOULD WE JUST QUICKLY IMPLEMENT THIS?!?!\
 
 \textbf{Encryption}
- 
+Our system handles sensitive information and credit card transactions, and as such security is an important issue, especially encryption of these data. We have not been able to focus on all parts of this system, and have therefore simplified it in terms of the security. This could though be an interesting extension of our system. More on the possibilities and decisions in the 'Security' section on page \ref{Security}. \
+
 
 
 
